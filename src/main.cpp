@@ -1,13 +1,5 @@
 #include <Arduino.h>
 
-
-struct Payload {
-  int16_t ints[7];
-  float floats[5];
-};
-
-Payload data;
-
 float feedbackKnockFinal;  // holds the calculated value for current feedback knock
 float feedbackMax = 0;  // holds the max negative value seen for feedback knock
 float fineKnockFinal;  // holds the calculated value for the current fine knock correction
@@ -29,6 +21,15 @@ unsigned int logger; // holds the value of the button for turning on nbp logging
 
 
 
+String incomingData = "";
+uint16_t rpm;
+uint8_t speed;
+uint8_t throttle;
+
+void processSerial();
+void sendFrame();
+void printHexDump(uint8_t* data, size_t length);
+
 
 void setup() {
   Serial.begin(115200);
@@ -37,26 +38,51 @@ void setup() {
 }
 
 void loop() {
-  const size_t expectedBytes = sizeof(Payload);
+  processSerial();
+  Serial.println(rpm);
+  Serial.println(speed);
+  Serial.println(throttle);
+  sendFrame();
+  delay(100);
+}
 
-  if (Serial2.available() >= expectedBytes) {
-    uint8_t buffer[expectedBytes];
-    Serial2.readBytes(buffer, expectedBytes);
 
-    memcpy(&data, buffer, expectedBytes);
+void sendFrame() {
+  uint8_t frame[5];
 
-    // Print received data
-    Serial.print("Ints: ");
-    for (int i = 0; i < 8; i++) {
-      Serial.print(data.ints[i]);
-      Serial.print(' ');
-    }
+  frame[0] = 0x60;
+  frame[1] = (rpm >> 8) & 0xFF;  // RPM high byte
+  frame[2] = rpm & 0xFF;         // RPM low byte
+  frame[3] = speed;
+  frame[4] = throttle;
 
-    Serial.print("\nFloats: ");
-    for (int i = 0; i < 5; i++) {
-      Serial.print(data.floats[i], 2);
-      Serial.print(' ');
-    }
-    Serial.println();
+  printHexDump(frame, sizeof(frame));  // print before sending
+  Serial.write(frame, sizeof(frame));
+}
+
+void printHexDump(uint8_t* data, size_t length) {
+  Serial.print("Raw: ");
+  for (size_t i = 0; i < length; i++) {
+    if (data[i] < 16) Serial.print("0");
+    Serial.print(data[i], HEX);
+    Serial.print(" ");
+  }
+  Serial.println( );
+}
+
+
+void processSerial() {
+  if (Serial2.available ()) {
+    incomingData = Serial2.readStringUntil('\n');
+    incomingData.trim();
+
+    //Serial.println(incomingData);
+
+    int firstComma = incomingData.indexOf(',');
+    int secondComma = incomingData.indexOf(',', firstComma + 1);
+
+    rpm = incomingData.substring(0, firstComma).toInt();
+    speed = incomingData.substring(firstComma + 1, secondComma).toInt();
+    throttle = incomingData.substring(secondComma + 1).toInt();
   }
 }
