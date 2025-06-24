@@ -1,0 +1,412 @@
+ts Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESE�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun 23 2025 17:33:57[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=12134h ( 74036) map[0m
+[0;32mI (115) esp_image: segment 1: paddr=0002215c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (115) esp_image: segment 2: paddr=00022180 vaddr=3ffbdb60 size=04480h ( 17536) load[0m
+[0;32mI (126) esp_image: segment 3: paddr=00026608 vaddr=40080000 size=09a10h ( 39440) load[0m
+[0;32mI (142) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=63958h (407896) map[0m
+[0;32mI (282) esp_image: segment 5: paddr=00093980 vaddr=40089a10 size=0d894h ( 55444) load[0m
+[0;32mI (314) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (315) boot: Disabling RNG early entropy source...[0m
+[0;32mI (325) cpu_start: Multicore app[0m
+[0;32mI (333) cpu_start: Pro cpu start user code[0m
+[0;32mI (333) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (334) app_init: Application information:[0m
+[0;32mI (334) app_init: Project name:     bt_spp_acceptor_demo[0m
+[0;32mI (339) app_init: App version:      1[0m
+[0;32mI (342) app_init: Compile time:     Jun 23 2025 17:33:00[0m
+[0;32mI (347) app_init: ELF file SHA256:  164fbcf7a...[0m
+[0;32mI (351) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (355) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (359) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (363) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (367) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (373) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (378) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (383) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (389) heap_init: At 3FFC7EE0 len 00018120 (96 KiB): DRAM[0m
+[0;32mI (394) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (399) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (405) heap_init: At 400972A4 len 00008D5C (35 KiB): IRAM[0m
+[0;32mI (411) spi_flash: detected chip: generic[0m
+[0;32mI (414) spi_flash: flash io: dio[0m
+[0;33mW (416) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (430) main_task: Started on CPU0[0m
+[0;32mI (440) main_task: Calling app_main()[0m
+[0;32mI (450) BTDM_INIT: BT controller compile version [dc1cd58][0m
+[0;32mI (450) BTDM_INIT: Bluetooth MAC: ac:15:18:d4:ac:d6[0m
+[0;32mI (450) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+Coex register Wi-Fi channel change btdm cb faild
+[1;31mE (1030) OBDLINK_EMULATOR: Enabled bluedroid[0m
+[1;31mE (1030) OBDLINK_EMULATOR: Sniff mode disabled via BTM_SetDefaultLinkPolicy[0m
+[0;32mI (1030) OBDLINK_EMULATOR: ESP_SPP_INIT_EVT[0m
+[0;32mI (1040) OBDLINK_EMULATOR: ESP_SPP_START_EVT handle:129 sec_id:55 scn:1[0m
+[0;32mI (1050) OBDLINK_EMULATOR: event: 10[0m
+[0;32mI (1050) OBDLINK_EMULATOR: Own address:[ac:15:18:d4:ac:d6][0m
+[0;32mI (1050) main_task: Returned from app_main()[0m
+[0;32mI (1220) OBDLINK_EMULATOR: Line: '6642,105,18'[0m
+[0;32mI (1220) OBDLINK_EMULATOR: RPM: 6642 | Speed: 105 | Throttle: 18[0m
+[0;32mI (1340) OBDLINK_EMULATOR: Line: '1265,141,79'[0m
+[0;32mI (1340) OBDLINK_EMULATOR: RPM: 1265 | Speed: 141 | Throttle: 79[0m
+[0;32mI (1460) OBDLINK_EMULATOR: Line: '2260,103,59'[0m
+[0;32mI (1460) OBDLINK_EMULATOR: RPM: 2260 | Speed: 103 | Throttle: 59[0m
+[0;32mI (1560) OBDLINK_EMULATOR: Line: '406,29,23'[0m
+[0;32mI (1560) OBDLINK_EMULATOR: RPM: 406 | Speed: 29 | Throttle: 23[0m
+[0;32mI (1670) OBDLINK_EMULATOR: Line: '1911,135,7'[0m
+[0;32mI (1670) OBDLINK_EMULATOR: RPM: 1911 | Speed: 135 | Throttle: 7[0m
+[0;32mI (1780) OBDLINK_EMULATOR: Line: '2214,73,44'[0m
+[0;32mI (1780) OBDLINK_EMULATOR: RPM: 2214 | Speed: 73 | Throttle: 44[0m
+[0;32mI (1900) OBDLINK_EMULATOR: Line: '1360,146,55'[0m
+[0;32mI (1900) OBDLINK_EMULATOR: RPM: 1360 | Speed: 146 | Throttle: 55[0m
+[0;32mI (2010) OBDLINK_EMULATOR: Line: '2204,54,81'[0m
+[0;32mI (2010) OBDLINK_EMULATOR: RPM: 2204 | Speed: 54 | Throttle: 81[0m
+[0;32mI (2120) OBDLINK_EMULATOR: Line: '813,115,48'[0m
+[0;32mI (2120) OBDLINK_EMULATOR: RPM: 813 | Speed: 115 | Throttle: 48[0m
+[0;32mI (2230) OBDLINK_EMULATOR: Line: '2071,65,19'[0m
+[0;32mI (2230) OBDLINK_EMULATOR: RPM: 2071 | Speed: 65 | Throttle: 19[0m
+[0;32mI (2320) OBDLINK_EMULATOR: Line: '85,77,14'[0m
+[0;32mI (2320) OBDLINK_EMULATOR: RPM: 85 | Speed: 77 | Throttle: 14[0m
+[0;32mI (2420) OBDLINK_EMULATOR: Line: '3478,63,0'[0m
+[0;32mI (2420) OBDLINK_EMULATOR: RPM: 3478 | Speed: 63 | Throttle: 0[0m
+[0;32mI (2540) OBDLINK_EMULATOR: Line: '5458,123,84'[0m
+[0;32mI (2540) OBDLINK_EMULATOR: RPM: 5458 | Speed: 123 | Throttle: 84[0m
+[0;32mI (2660) OBDLINK_EMULATOR: Line: '6029,113,46'[0m
+[0;32mI (2660) OBDLINK_EMULATOR: RPM: 6029 | Speed: 113 | Throttle: 46[0m
+[0;32mI (2770) OBDLINK_EMULATOR: Line: '5462,15,88'[0m
+[0;32mI (2770) OBDLINK_EMULATOR: RPM: 5462 | Speed: 15 | Throttle: 88[0m
+[0;32mI (2870) OBDLINK_EMULATOR: Line: '1680,5,19'[0m
+[0;32mI (2870) OBDLINK_EMULATOR: RPM: 1680 | Speed: 5 | Throttle: 19[0m
+[0;32mI (2980) OBDLINK_EMULATOR: Line: '1190,82,81'[0m
+[0;32mI (2980) OBDLINK_EMULATOR: RPM: 1190 | Speed: 82 | Throttle: 81[0m
+[0;32mI (3100) OBDLINK_EMULATOR: Line: '5530,137,85'[0m
+[0;32mI (3100) OBDLINK_EMULATOR: RPM: 5530 | Speed: 137 | Throttle: 85[0m
+[0;32mI (3210) OBDLINK_EMULATOR: Line: '4755,74,69'[0m
+[0;32mI (3210) OBDLINK_EMULATOR: RPM: 4755 | Speed: 74 | Throttle: 69[0m
+[0;32mI (3320) OBDLINK_EMULATOR: Line: '462,109,27'[0m
+[0;32mI (3320) OBDLINK_EMULATOR: RPM: 462 | Speed: 109 | Throttle: 27[0m
+[0;32mI (3440) OBDLINK_EMULATOR: Line: '3743,109,30'[0m
+[0;32mI (3440) OBDLINK_EMULATOR: RPM: 3743 | Speed: 109 | Throttle: 30[0m
+[0;32mI (3550) OBDLINK_EMULATOR: Line: '3052,71,54'[0m
+[0;32mI (3550) OBDLINK_EMULATOR: RPM: 3052 | Speed: 71 | Throttle: 54[0m
+[0;32mI (3650) OBDLINK_EMULATOR: Line: '5509,93,9'[0m
+[0;32mI (3650) OBDLINK_EMULATOR: RPM: 5509 | Speed: 93 | Throttle: 9[0m
+[0;32mI (3760) OBDLINK_EMULATOR: Line: '2327,76,38'[0m
+[0;32mI (3760) OBDLINK_EMULATOR: RPM: 2327 | Speed: 76 | Throttle: 38[0m
+[0;32mI (3870) OBDLINK_EMULATOR: Line: '1781,80,76'[0m
+[0;32mI (3870) OBDLINK_EMULATOR: RPM: 1781 | Speed: 80 | Throttle: 76[0m
+[0;32mI (3980) OBDLINK_EMULATOR: Line: '1831,29,91'[0m
+[0;32mI (3980) OBDLINK_EMULATOR: RPM: 1831 | Speed: 29 | Throttle: 91[0m
+[0;32mI (4070) OBDLINK_EMULATOR: Line: '312,60,3'[0m
+[0;32mI (4070) OBDLINK_EMULATOR: RPM: 312 | Speed: 60 | Throttle: 3[0m
+[0;32mI (4190) OBDLINK_EMULATOR: Line: '5428,148,84'[0m
+[0;32mI (4190) OBDLINK_EMULATOR: RPM: 5428 | Speed: 148 | Throttle: 84[0m
+[0;32mI (4300) OBDLINK_EMULATOR: Line: '4284,82,25'[0m
+[0;32mI (4300) OBDLINK_EMULATOR: RPM: 4284 | Speed: 82 | Throttle: 25[0m
+[0;32mI (4410) OBDLINK_EMULATOR: Line: '5127,65,64'[0m
+[0;32mI (4410) OBDLINK_EMULATOR: RPM: 5127 | Speed: 65 | Throttle: 64[0m
+[0;32mI (4520) OBDLINK_EMULATOR: Line: '1404,76,84'[0m
+[0;32mI (4520) OBDLINK_EMULATOR: RPM: 1404 | Speed: 76 | Throttle: 84[0m
+[0;32mI (4640) OBDLINK_EMULATOR: Line: '3087,110,46'[0m
+[0;32mI (4640) OBDLINK_EMULATOR: RPM: 3087 | Speed: 110 | Throttle: 46[0m
+[0;32mI (4750) OBDLINK_EMULATOR: Line: '2143,98,24'[0m
+[0;32mI (4750) OBDLINK_EMULATOR: RPM: 2143 | Speed: 98 | Throttle: 24[0m
+[0;32mI (4840) OBDLINK_EMULATOR: Line: '467,8,31'[0m
+[0;32mI (4840) OBDLINK_EMULATOR: RPM: 467 | Speed: 8 | Throttle: 31[0m
+[0;32mI (4940) OBDLINK_EMULATOR: Line: '480,70,82'[0m
+[0;32mI (4940) OBDLINK_EMULATOR: RPM: 480 | Speed: 70 | Throttle: 82[0m
+[0;32mI (5040) OBDLINK_EMULATOR: Line: '3832,36,9'[0m
+[0;32mI (5040) OBDLINK_EMULATOR: RPM: 3832 | Speed: 36 | Throttle: 9[0m
+[0;32mI (5140) OBDLINK_EMULATOR: Line: '13,145,56'[0m
+[0;32mI (5140) OBDLINK_EMULATOR: RPM: 13 | Speed: 145 | Throttle: 56[0m
+[0;32mI (5250) OBDLINK_EMULATOR: Line: '3845,95,94'[0m
+[0;32mI (5250) OBDLINK_EMULATOR: RPM: 3845 | Speed: 95 | Throttle: 94[0m
+[0;32mI (5350) OBDLINK_EMULATOR: Line: '1278,12,2'[0m
+[0;32mI (5350) OBDLINK_EMULATOR: RPM: 1278 | Speed: 12 | Throttle: 2[0m
+[0;32mI (5460) OBDLINK_EMULATOR: Line: '4409,14,62'[0m
+[0;32mI (5460) OBDLINK_EMULATOR: RPM: 4409 | Speed: 14 | Throttle: 62[0m
+[0;32mI (5570) OBDLINK_EMULATOR: Line: '3442,22,49'[0m
+[0;32mI (5570) OBDLINK_EMULATOR: RPM: 3442 | Speed: 22 | Throttle: 49[0m
+[0;32mI (5690) OBDLINK_EMULATOR: Line: '6174,103,50'[0m
+[0;32mI (5690) OBDLINK_EMULATOR: RPM: 6174 | Speed: 103 | Throttle: 50[0m
+[0;32mI (5810) OBDLINK_EMULATOR: Line: '3248,127,30'[0m
+[0;32mI (5810) OBDLINK_EMULATOR: RPM: 3248 | Speed: 127 | Throttle: 30[0m
+[0;32mI (5900) OBDLINK_EMULATOR: Line: '03,66,77'[0m
+[0;32mI (5900) OBDLINK_EMULATOR: RPM: 3 | Speed: 66 | Throttle: 77[0m
+[0;32mI (6020) OBDLINK_EMULATOR: Line: '2112,113,89'[0m
+[0;32mI (6020) OBDLINK_EMULATOR: RPM: 2112 | Speed: 113 | Throttle: 89[0m
+[0;32mI (6130) OBDLINK_EMULATOR: Line: '1139,54,22'[0m
+[0;32mI (6130) OBDLINK_EMULATOR: RPM: 1139 | Speed: 54 | Throttle: 22[0m
+[0;32mI (6240) OBDLINK_EMULATOR: Line: '4216,57,43'[0m
+[0;32mI (6240) OBDLINK_EMULATOR: RPM: 4216 | Speed: 57 | Throttle: 43[0m
+[0;32mI (6340) OBDLINK_EMULATOR: Line: '909,33,91'[0m
+[0;32mI (6340) OBDLINK_EMULATOR: RPM: 909 | Speed: 33 | Throttle: 91[0m
+[0;32mI (6430) OBDLINK_EMULATOR: Line: '5261,6,3'[0m
+[0;32mI (6430) OBDLINK_EMULATOR: RPM: 5261 | Speed: 6 | Throttle: 3[0m
+[0;32mI (6550) OBDLINK_EMULATOR: Line: '5323,121,11'[0m
+[0;32mI (6550) OBDLINK_EMULATOR: RPM: 5323 | Speed: 121 | Throttle: 11[0m
+[0;32mI (6660) OBDLINK_EMULATOR: Line: '1576,57,80'[0m
+[0;32mI (6660) OBDLINK_EMULATOR: RPM: 1576 | Speed: 57 | Throttle: 80[0m
+[0;32mI (6770) OBDLINK_EMULATOR: Line: '6795,83,18'[0m
+[0;32mI (6770) OBDLINK_EMULATOR: RPM: 6795 | Speed: 83 | Throttle: 18[0m
+[0;32mI (6880) OBDLINK_EMULATOR: Line: '1994,55,30'[0m
+[0;32mI (6880) OBDLINK_EMULATOR: RPM: 1994 | Speed: 55 | Throttle: 30[0m
+[0;32mI (6990) OBDLINK_EMULATOR: Line: '3687,83,82'[0m
+[0;32mI (6990) OBDLINK_EMULATOR: RPM: 3687 | Speed: 83 | Throttle: 82[0m
+[0;32mI (7090) OBDLINK_EMULATOR: Line: '292,67,11'[0m
+[0;32mI (7090) OBDLINK_EMULATOR: RPM: 292 | Speed: 67 | Throttle: 11[0m
+[0;32mI (7190) OBDLINK_EMULATOR: Line: '988,138,5'[0m
+[0;32mI (7190) OBDLINK_EMULATOR: RPM: 988 | Speed: 138 | Throttle: 5[0m
+[0;32mI (7310) OBDLINK_EMULATOR: Line: '3235,136,12'[0m
+[0;32mI (7310) OBDLINK_EMULATOR: RPM: 3235 | Speed: 136 | Throttle: 12[0m
+[0;32mI (7420) OBDLINK_EMULATOR: Line: '1283,52,37'[0m
+[0;32mI (7420) OBDLINK_EMULATOR: RPM: 1283 | Speed: 52 | Throttle: 37[0m
+[0;32mI (7530) OBDLINK_EMULATOR: Line: '6733,78,85'[0m
+[0;32mI (7530) OBDLINK_EMULATOR: RPM: 6733 | Speed: 78 | Throttle: 85[0m
+[0;32mI (7640) OBDLINK_EMULATOR: Line: '3171,89,52'[0m
+[0;32mI (7640) OBDLINK_EMULATOR: RPM: 3171 | Speed: 89 | Throttle: 52[0m
+[0;32mI (7750) OBDLINK_EMULATOR: Line: '3298,33,86'[0m
+[0;32mI (7750) OBDLINK_EMULATOR: RPM: 3298 | Speed: 33 | Throttle: 86[0m
+[0;32mI (7870) OBDLINK_EMULATOR: Line: '6179,128,55'[0m
+[0;32mI (7870) OBDLINK_EMULATOR: RPM: 6179 | Speed: 128 | Throttle: 55[0m
+[0;32mI (7980) OBDLINK_EMULATOR: Line: '2932,37,39'[0m
+[0;32mI (7980) OBDLINK_EMULATOR: RPM: 2932 | Speed: 37 | Throttle: 39[0m
+[0;32mI (8080) OBDLINK_EMULATOR: Line: '684,95,41'[0m
+[0;32mI (8080) OBDLINK_EMULATOR: RPM: 684 | Speed: 95 | Throttle: 41[0m
+[0;32mI (8180) OBDLINK_EMULATOR: Line: '490,15,11'[0m
+[0;32mI (8180) OBDLINK_EMULATOR: RPM: 490 | Speed: 15 | Throttle: 11[0m
+[0;32mI (8300) OBDLINK_EMULATOR: Line: '4814,148,77'[0m
+[0;32mI (8300) OBDLINK_EMULATOR: RPM: 4814 | Speed: 148 | Throttle: 77[0m
+[0;32mI (8400) OBDLINK_EMULATOR: Line: '483,71,19'[0m
+[0;32mI (8400) OBDLINK_EMULATOR: RPM: 483 | Speed: 71 | Throttle: 19[0m
+[0;32mI (8520) OBDLINK_EMULATOR: Line: '5516,100,63'[0m
+[0;32mI (8520) OBDLINK_EMULATOR: RPM: 5516 | Speed: 100 | Throttle: 63[0m
+[0;32mI (8630) OBDLINK_EMULATOR: Line: '1048,48,32'[0m
+[0;32mI (8630) OBDLINK_EMULATOR: RPM: 1048 | Speed: 48 | Throttle: 32[0m
+[0;32mI (8730) OBDLINK_EMULATOR: Line: '4558,63,6'[0m
+[0;32mI (8730) OBDLINK_EMULATOR: RPM: 4558 | Speed: 63 | Throttle: 6[0m
+[0;32mI (8840) OBDLINK_EMULATOR: Line: '2899,63,83'[0m
+[0;32mI (8840) OBDLINK_EMULATOR: RPM: 2899 | Speed: 63 | Throttle: 83[0m
+[0;32mI (8950) OBDLINK_EMULATOR: Line: '1235,44,92'[0m
+[0;32mI (8950) OBDLINK_EMULATOR: RPM: 1235 | Speed: 44 | Throttle: 92[0m
+[0;32mI (9070) OBDLINK_EMULATOR: Line: '3877,14,79'[0m
+[0;32mI (9070) OBDLINK_EMULATOR: RPM: 3877 | Speed: 14 | Throttle: 79[0m
+[0;32mI (9180) OBDLINK_EMULATOR: Line: '1328,15,40'[0m
+[0;32mI (9180) OBDLINK_EMULATOR: RPM: 1328 | Speed: 15 | Throttle: 40[0m
+[0;32mI (9290) OBDLINK_EMULATOR: Line: '3799,68,84'[0m
+[0;32mI (9290) OBDLINK_EMULATOR: RPM: 3799 | Speed: 68 | Throttle: 84[0m
+[0;32mI (9400) OBDLINK_EMULATOR: Line: '2709,58,27'[0m
+[0;32mI (9400) OBDLINK_EMULATOR: RPM: 2709 | Speed: 58 | Throttle: 27[0m
+[0;32mI (9510) OBDLINK_EMULATOR: Line: '1738,46,55'[0m
+[0;32mI (9510) OBDLINK_EMULATOR: RPM: 1738 | Speed: 46 | Throttle: 55[0m
+[0;32mI (9620) OBDLINK_EMULATOR: Line: '3542,60,28'[0m
+[0;32mI (9620) OBDLINK_EMULATOR: RPM: 3542 | Speed: 60 | Throttle: 28[0m
+[0;32mI (9740) OBDLINK_EMULATOR: Line: '5286,143,48'[0m
+[0;32mI (9740) OBDLINK_EMULATOR: RPM: 5286 | Speed: 143 | Throttle: 48[0m
+[0;32mI (9850) OBDLINK_EMULATOR: Line: '535,135,18'[0m
+[0;32mI (9850) OBDLINK_EMULATOR: RPM: 535 | Speed: 135 | Throttle: 18[0m
+[0;32mI (9960) OBDLINK_EMULATOR: Line: '4143,69,64'[0m
+[0;32mI (9960) OBDLINK_EMULATOR: RPM: 4143 | Speed: 69 | Throttle: 64[0m
+[0;32mI (10070) OBDLINK_EMULATOR: Line: '5360,84,97'[0m
+[0;32mI (10070) OBDLINK_EMULATOR: RPM: 5360 | Speed: 84 | Throttle: 97[0m
+[0;32mI (10190) OBDLINK_EMULATOR: Line: '4546,119,21'[0m
+[0;32mI (10190) OBDLINK_EMULATOR: RPM: 4546 | Speed: 119 | Throttle: 21[0m
+[0;32mI (10290) OBDLINK_EMULATOR: Line: '183,97,50'[0m
+[0;32mI (10290) OBDLINK_EMULATOR: RPM: 183 | Speed: 97 | Throttle: 50[0m
+[0;32mI (10400) OBDLINK_EMULATOR: Line: '1180,57,65'[0m
+[0;32mI (10400) OBDLINK_EMULATOR: RPM: 1180 | Speed: 57 | Throttle: 65[0m
+[0;32mI (10500) OBDLINK_EMULATOR: Line: '97,125,96'[0m
+[0;32mI (10500) OBDLINK_EMULATOR: RPM: 97 | Speed: 125 | Throttle: 96[0m
+[0;32mI (10610) OBDLINK_EMULATOR: Line: '5736,84,31'[0m
+[0;32mI (10610) OBDLINK_EMULATOR: RPM: 5736 | Speed: 84 | Throttle: 31[0m
+[0;32mI (10720) OBDLINK_EMULATOR: Line: '2477,85,96'[0m
+[0;32mI (10720) OBDLINK_EMULATOR: RPM: 2477 | Speed: 85 | Throttle: 96[0m
+[0;32mI (10830) OBDLINK_EMULATOR: Line: '4168,13,16'[0m
+[0;32mI (10830) OBDLINK_EMULATOR: RPM: 4168 | Speed: 13 | Throttle: 16[0m
+[0;32mI (10930) OBDLINK_EMULATOR: Line: '83,143,88'[0m
+[0;32mI (10930) OBDLINK_EMULATOR: RPM: 83 | Speed: 143 | Throttle: 88[0m
+[0;32mI (11040) OBDLINK_EMULATOR: Line: '2676,18,88'[0m
+[0;32mI (11040) OBDLINK_EMULATOR: RPM: 2676 | Speed: 18 | Throttle: 88[0m
+[0;32mI (11110) OBDLINK_EMULATOR: Line: ',42,56'[0m
+[0;32mI (11110) OBDLINK_EMULATOR: RPM: 2676 | Speed: 18 | Throttle: 88[0m
+[0;32mI (11210) OBDLINK_EMULATOR: Line: '992,81,33'[0m
+[0;32mI (11210) OBDLINK_EMULATOR: RPM: 992 | Speed: 81 | Throttle: 33[0m
+[0;32mI (11320) OBDLINK_EMULATOR: Line: '3514,144,5'[0m
+[0;32mI (11320) OBDLINK_EMULATOR: RPM: 3514 | Speed: 144 | Throttle: 5[0m
+[0;32mI (11440) OBDLINK_EMULATOR: Line: '5677,102,20'[0m
+[0;32mI (11440) OBDLINK_EMULATOR: RPM: 5677 | Speed: 102 | Throttle: 20[0m
+[0;32mI (11540) OBDLINK_EMULATOR: Line: '3347,2,82'[0m
+[0;32mI (11540) OBDLINK_EMULATOR: RPM: 3347 | Speed: 2 | Throttle: 82[0m
+[0;32mI (11640) OBDLINK_EMULATOR: Line: '6303,5,74'[0m
+[0;32mI (11640) OBDLINK_EMULATOR: RPM: 6303 | Speed: 5 | Throttle: 74[0m
+[0;32mI (11750) OBDLINK_EMULATOR: Line: '6321,62,94'[0m
+[0;32mI (11750) OBDLINK_EMULATOR: RPM: 6321 | Speed: 62 | Throttle: 94[0m
+[0;32mI (11840) OBDLINK_EMULATOR: Line: '35,98,17'[0m
+[0;32mI (11840) OBDLINK_EMULATOR: RPM: 35 | Speed: 98 | Throttle: 17[0m
+[0;32mI (11950) OBDLINK_EMULATOR: Line: '4079,79,97'[0m
+[0;32mI (11950) OBDLINK_EMULATOR: RPM: 4079 | Speed: 79 | Throttle: 97[0m
+[0;32mI (12070) OBDLINK_EMULATOR: Line: '4428,139,83'[0m
+[0;32mI (12070) OBDLINK_EMULATOR: RPM: 4428 | Speed: 139 | Throttle: 83[0m
+[0;32mI (12170) OBDLINK_EMULATOR: Line: '1280,3,43'[0m
+[0;32mI (12170) OBDLINK_EMULATOR: RPM: 1280 | Speed: 3 | Throttle: 43[0m
+[0;32mI (12280) OBDLINK_EMULATOR: Line: '5454,92,69'[0m
+[0;32mI (12280) OBDLINK_EMULATOR: RPM: 5454 | Speed: 92 | Throttle: 69[0m
+[0;32mI (12390) OBDLINK_EMULATOR: Line: '1204,63,61'[0m
+[0;32mI (12390) OBDLINK_EMULATOR: RPM: 1204 | Speed: 63 | Throttle: 61[0m
+[0;32mI (12500) OBDLINK_EMULATOR: Line: '5722,31,32'[0m
+[0;32mI (12500) OBDLINK_EMULATOR: RPM: 5722 | Speed: 31 | Throttle: 32[0m
+[0;32mI (12620) OBDLINK_EMULATOR: Line: '1011,120,67'[0m
+[0;32mI (12620) OBDLINK_EMULATOR: RPM: 1011 | Speed: 120 | Throttle: 67[0m
+[0;32mI (12730) OBDLINK_EMULATOR: Line: '883,148,16'[0m
+[0;32mI (12730) OBDLINK_EMULATOR: RPM: 883 | Speed: 148 | Throttle: 16[0m
+[0;32mI (12770) OBDLINK_EMULATOR: Line: ',32'[0m
+[0;32mI (12770) OBDLINK_EMULATOR: RPM: 883 | Speed: 148 | Throttle: 16[0m
+[0;32mI (12880) OBDLINK_EMULATOR: Line: '4909,140,3'[0m
+[0;32mI (12880) OBDLINK_EMULATOR: RPM: 4909 | Speed: 140 | Throttle: 3[0m
+[0;32mI (13000) OBDLINK_EMULATOR: Line: '3882,142,32'[0m
+[0;32mI (13000) OBDLINK_EMULATOR: RPM: 3882 | Speed: 142 | Throttle: 32[0m
+[0;32mI (13120) OBDLINK_EMULATOR: Line: '3078,131,77'[0m
+[0;32mI (13120) OBDLINK_EMULATOR: RPM: 3078 | Speed: 131 | Throttle: 77[0m
+[0;32mI (13210) OBDLINK_EMULATOR: Line: '401,21,3'[0m
+[0;32mI (13210) OBDLINK_EMULATOR: RPM: 401 | Speed: 21 | Throttle: 3[0m
+[0;32mI (13320) OBDLINK_EMULATOR: Line: '1194,65,88'[0m
+[0;32mI (13320) OBDLINK_EMULATOR: RPM: 1194 | Speed: 65 | Throttle: 88[0m
+[0;32mI (13430) OBDLINK_EMULATOR: Line: '4168,46,42'[0m
+[0;32mI (13430) OBDLINK_EMULATOR: RPM: 4168 | Speed: 46 | Throttle: 42[0m
+[0;32mI (13550) OBDLINK_EMULATOR: Line: '5535,117,65'[0m
+[0;32mI (13550) OBDLINK_EMULATOR: RPM: 5535 | Speed: 117 | Throttle: 65[0m
+[0;32mI (13670) OBDLINK_EMULATOR: Line: '6058,130,18'[0m
+[0;32mI (13670) OBDLINK_EMULATOR: RPM: 6058 | Speed: 130 | Throttle: 18[0m
+[0;32mI (13780) OBDLINK_EMULATOR: Line: '3375,49,83'[0m
+[0;32mI (13780) OBDLINK_EMULATOR: RPM: 3375 | Speed: 49 | Throttle: 83[0m
+[0;32mI (13880) OBDLINK_EMULATOR: Line: '727,16,31'[0m
+[0;32mI (13880) OBDLINK_EMULATOR: RPM: 727 | Speed: 16 | Throttle: 31[0m
+[0;32mI (13980) OBDLINK_EMULATOR: Line: '2213,8,24'[0m
+[0;32mI (13980) OBDLINK_EMULATOR: RPM: 2213 | Speed: 8 | Throttle: 24[0m
+[0;32mI (14100) OBDLINK_EMULATOR: Line: '4472,136,51'[0m
+[0;32mI (14100) OBDLINK_EMULATOR: RPM: 4472 | Speed: 136 | Throttle: 51[0m
+[0;32mI (14220) OBDLINK_EMULATOR: Line: '5743,116,72'[0m
+[0;32mI (14220) OBDLINK_EMULATOR: RPM: 5743 | Speed: 116 | Throttle: 72[0m
+[0;32mI (14330) OBDLINK_EMULATOR: Line: '5619,74,33'[0m
+[0;32mI (14330) OBDLINK_EMULATOR: RPM: 5619 | Speed: 74 | Throttle: 33[0m
+[0;32mI (14440) OBDLINK_EMULATOR: Line: '2243,63,61'[0m
+[0;32mI (14440) OBDLINK_EMULATOR: RPM: 2243 | Speed: 63 | Throttle: 61[0m
+[0;32mI (14560) OBDLINK_EMULATOR: Line: '3302,127,72'[0m
+[0;32mI (14560) OBDLINK_EMULATOR: RPM: 3302 | Speed: 127 | Throttle: 72[0m
+[0;32mI (14660) OBDLINK_EMULATOR: Line: '483,33,55'[0m
+[0;32mI (14660) OBDLINK_EMULATOR: RPM: 483 | Speed: 33 | Throttle: 55[0m
+[0;32mI (14770) OBDLINK_EMULATOR: Line: '5101,14,86'[0m
+[0;32mI (14770) OBDLINK_EMULATOR: RPM: 5101 | Speed: 14 | Throttle: 86[0m
+[0;32mI (14860) OBDLINK_EMULATOR: Line: '557,7,27'[0m
+[0;32mI (14860) OBDLINK_EMULATOR: RPM: 557 | Speed: 7 | Throttle: 27[0m
+[0;32mI (14890) OBDLINK_EMULATOR: Line: '64'[0m
+[0;32mI (14890) OBDLINK_EMULATOR: RPM: 64 | Speed: 7 | Throttle: 27[0m
+[0;32mI (14990) OBDLINK_EMULATOR: Line: '323,70,84'[0m
+[0;32mI (14990) OBDLINK_EMULATOR: RPM: 323 | Speed: 70 | Throttle: 84[0m
+[0;32mI (15100) OBDLINK_EMULATOR: Line: '596,111,79'[0m
+[0;32mI (15100) OBDLINK_EMULATOR: RPM: 596 | Speed: 111 | Throttle: 79[0m
+[0;32mI (15220) OBDLINK_EMULATOR: Line: '4708,117,89'[0m
+[0;32mI (15220) OBDLINK_EMULATOR: RPM: 4708 | Speed: 117 | Throttle: 89[0m
+[0;32mI (15330) OBDLINK_EMULATOR: Line: '3945,73,52'[0m
+[0;32mI (15330) OBDLINK_EMULATOR: RPM: 3945 | Speed: 73 | Throttle: 52[0m
+[0;32mI (15440) OBDLINK_EMULATOR: Line: '5527,29,94'[0m
+[0;32mI (15440) OBDLINK_EMULATOR: RPM: 5527 | Speed: 29 | Throttle: 94[0m
+[0;32mI (15550) OBDLINK_EMULATOR: Line: '846,122,37'[0m
+[0;32mI (15550) OBDLINK_EMULATOR: RPM: 846 | Speed: 122 | Throttle: 37[0m
+[0;32mI (15670) OBDLINK_EMULATOR: Line: '6627,128,66'[0m
+[0;32mI (15670) OBDLINK_EMULATOR: RPM: 6627 | Speed: 128 | Throttle: 66[0m
+[0;32mI (15790) OBDLINK_EMULATOR: Line: '3185,130,58'[0m
+[0;32mI (15790) OBDLINK_EMULATOR: RPM: 3185 | Speed: 130 | Throttle: 58[0m
+[0;32mI (15880) OBDLINK_EMULATOR: Line: '3,119,92'[0m
+[0;32mI (15880) OBDLINK_EMULATOR: RPM: 3 | Speed: 119 | Throttle: 92[0m
+[0;32mI (15970) OBDLINK_EMULATOR: Line: '760,69,6'[0m
+[0;32mI (15970) OBDLINK_EMULATOR: RPM: 760 | Speed: 69 | Throttle: 6[0m
+[0;32mI (16080) OBDLINK_EMULATOR: Line: '6450,47,19'[0m
+[0;32mI (16080) OBDLINK_EMULATOR: RPM: 6450 | Speed: 47 | Throttle: 19[0m
+[0;32mI (16190) OBDLINK_EMULATOR: Line: '375,142,13'[0m
+[0;32mI (16190) OBDLINK_EMULATOR: RPM: 375 | Speed: 142 | Throttle: 13[0m
+[0;32mI (16290) OBDLINK_EMULATOR: Line: '81,113,65'[0m
+[0;32mI (16290) OBDLINK_EMULATOR: RPM: 81 | Speed: 113 | Throttle: 65[0m
+[0;32mI (16390) OBDLINK_EMULATOR: Line: '4682,28,1'[0m
+[0;32mI (16390) OBDLINK_EMULATOR: RPM: 4682 | Speed: 28 | Throttle: 1[0m
+[0;32mI (16500) OBDLINK_EMULATOR: Line: '4158,32,74'[0m
+[0;32mI (16500) OBDLINK_EMULATOR: RPM: 4158 | Speed: 32 | Throttle: 74[0m
+[0;32mI (16570) OBDLINK_EMULATOR: Line: '134,89'[0m
+[0;32mI (16570) OBDLINK_EMULATOR: RPM: 134 | Speed: 89 | Throttle: 74[0m
+[0;32mI (16680) OBDLINK_EMULATOR: Line: '3610,62,99'[0m
+[0;32mI (16680) OBDLINK_EMULATOR: RPM: 3610 | Speed: 62 | Throttle: 99[0m
+[0;32mI (16790) OBDLINK_EMULATOR: Line: '698,117,55'[0m
+[0;32mI (16790) OBDLINK_EMULATOR: RPM: 698 | Speed: 117 | Throttle: 55[0m
+[0;32mI (16910) OBDLINK_EMULATOR: Line: '4265,100,59'[0m
+[0;32mI (16910) OBDLINK_EMULATOR: RPM: 4265 | Speed: 100 | Throttle: 59[0m
+[0;32mI (17020) OBDLINK_EMULATOR: Line: '1702,95,18'[0m
+[0;32mI (17020) OBDLINK_EMULATOR: RPM: 1702 | Speed: 95 | Throttle: 18[0m
+[0;32mI (17130) OBDLINK_EMULATOR: Line: '2299,71,91'[0m
+[0;32mI (17130) OBDLINK_EMULATOR: RPM: 2299 | Speed: 71 | Throttle: 91[0m
+[0;32mI (17230) OBDLINK_EMULATOR: Line: '277,64,49'[0m
+[0;32mI (17230) OBDLINK_EMULATOR: RPM: 277 | Speed: 64 | Throttle: 49[0m
+[0;32mI (17340) OBDLINK_EMULATOR: Line: '5538,51,21'[0m
+[0;32mI (17340) OBDLINK_EMULATOR: RPM: 5538 | Speed: 51 | Throttle: 21[0m
+[0;32mI (17460) OBDLINK_EMULATOR: Line: '1001,137,55'[0m
+[0;32mI (17460) OBDLINK_EMULATOR: RPM: 1001 | Speed: 137 | Throttle: 55[0m
+[0;32mI (17530) OBDLINK_EMULATOR: Line: ',75,17'[0m
+[0;32mI (17530) OBDLINK_EMULATOR: RPM: 1001 | Speed: 137 | Throttle: 55[0m
+[0;32mI (17640) OBDLINK_EMULATOR: Line: '273,133,48'[0m
+[0;32mI (17640) OBDLINK_EMULATOR: RPM: 273 | Speed: 133 | Throttle: 48[0m
+[0;32mI (17750) OBDLINK_EMULATOR: Line: '5726,88,85'[0m
+[0;32mI (17750) OBDLINK_EMULATOR: RPM: 5726 | Speed: 88 | Throttle: 85[0m
+[0;32mI (17870) OBDLINK_EMULATOR: Line: '1190,116,61'[0m
+[0;32mI (17870) OBDLINK_EMULATOR: RPM: 1190 | Speed: 116 | Throttle: 61[0m
+[0;32mI (17970) OBDLINK_EMULATOR: Line: '4526,92,4'[0m
+[0;32mI (17970) OBDLINK_EMULATOR: RPM: 4526 | Speed: 92 | Throttle: 4[0m
+[0;32mI (18070) OBDLINK_EMULATOR: Line: '3589,61,7'[0m
+[0;32mI (18070) OBDLINK_EMULATOR: RPM: 3589 | Speed: 61 | Throttle: 7[0m
+[0;32mI (18180) OBDLINK_EMULATOR: Line: '2164,51,84'[0m
+[0;32mI (18180) OBDLINK_EMULATOR: RPM: 2164 | Speed: 51 | Throttle: 84[0m
+[0;32mI (18300) OBDLINK_EMULATOR: Line: '2777,104,35'[0m
+[0;32mI (18300) OBDLINK_EMULATOR: RPM: 2777 | Speed: 104 | Throttle: 35[0m
+[0;32mI (18400) OBDLINK_EMULATOR: Line: '885,51,51'[0m
+[0;32mI (18400) OBDLINK_EMULATOR: RPM: 885 | Speed: 51 | Throttle: 51[0m
+[0;32mI (18500) OBDLINK_EMULATOR: Line: '174,26,66'[0m
+[0;32mI (18500) OBDLINK_EMULATOR: RPM: 174 | Speed: 26 | Throttle: 66[0m
+[0;32mI (18620) OBDLINK_EMULATOR: Line: '6606,121,46'[0m
+[0;32mI (18620) OBDLINK_EMULATOR: RPM: 6606 | Speed: 121 | Throttle: 46[0m
+[0;32mI (18730) OBDLINK_EMULATOR: Line: '2814,68,20'[0m
+[0;32mI (18730) OBDLINK_EMULATOR: RPM: 2814 | Speed: 68 | Throttle: 20[0m
+[0;32mI (18840) OBDLINK_EMULATOR: Line: '6388,15,17'[0m
+[0;32mI (18840) OBDLINK_EMULATOR: RPM: 6388 | Speed: 15 | Throttle: 17[0m
+[0;32mI (18950) OBDLINK_EMULATOR: Line: '5739,50,71'[0m
+[0;32mI (18950) OBDLINK_EMULATOR: RPM: 5739 | Speed: 50 | Throttle: 71[0m
+[0;32mI (19050) OBDLINK_EMULATOR: Line: '176,88,93'[0m
+[0;32mI (19050) OBDLINK_EMULATOR: RPM: 176 | Speed: 88 | Throttle: 93[0m
+[0;32mI (19160) OBDLINK_EMULATOR: Line: '424,132,90'[0m
+[0;32mI (19160) OBDLINK_EMULATOR: RPM: 424 | Speed: 132 | Throttle: 90[0m
+[0;32mI (19270) OBDLINK_EMULATOR: Line: '4891,22,41'[0m
+[0;32mI (19270) OBDLINK_EMULATOR: RPM: 4891 | Speed: 22 | Throttle: 41[0m
+[0;32mI (19390) OBDLINK_EMULATOR: Line: '4833,112,71'[0m
+[0;32mI (19390) OBDLINK_EMULATOR: RPM: 4833 | Speed: 112 | Throttle: 71[0m

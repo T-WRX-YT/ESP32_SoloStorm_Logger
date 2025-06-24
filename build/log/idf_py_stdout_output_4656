@@ -1,0 +1,584 @@
+ts Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESE�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun 23 2025 17:33:57[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=12174h ( 74100) map[0m
+[0;32mI (115) esp_image: segment 1: paddr=0002219c vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (115) esp_image: segment 2: paddr=000221c0 vaddr=3ffbdb60 size=04480h ( 17536) load[0m
+[0;32mI (126) esp_image: segment 3: paddr=00026648 vaddr=40080000 size=099d0h ( 39376) load[0m
+[0;32mI (142) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=63924h (407844) map[0m
+[0;32mI (282) esp_image: segment 5: paddr=0009394c vaddr=400899d0 size=0d8d4h ( 55508) load[0m
+[0;32mI (315) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (315) boot: Disabling RNG early entropy source...[0m
+[0;32mI (325) cpu_start: Multicore app[0m
+[0;32mI (333) cpu_start: Pro cpu start user code[0m
+[0;32mI (334) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (334) app_init: Application information:[0m
+[0;32mI (334) app_init: Project name:     bt_spp_acceptor_demo[0m
+[0;32mI (339) app_init: App version:      1[0m
+[0;32mI (342) app_init: Compile time:     Jun 23 2025 17:33:00[0m
+[0;32mI (347) app_init: ELF file SHA256:  57b0d0523...[0m
+[0;32mI (351) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (355) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (359) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (363) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (367) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (373) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (378) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (383) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (389) heap_init: At 3FFC7EE0 len 00018120 (96 KiB): DRAM[0m
+[0;32mI (394) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (399) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (405) heap_init: At 400972A4 len 00008D5C (35 KiB): IRAM[0m
+[0;32mI (411) spi_flash: detected chip: generic[0m
+[0;32mI (414) spi_flash: flash io: dio[0m
+[0;33mW (417) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (430) main_task: Started on CPU0[0m
+[0;32mI (440) main_task: Calling app_main()[0m
+[0;32mI (450) BTDM_INIT: BT controller compile version [dc1cd58][0m
+[0;32mI (450) BTDM_INIT: Bluetooth MAC: ac:15:18:d4:ac:d6[0m
+[0;32mI (450) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (530) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+Coex register Wi-Fi channel change btdm cb faild
+[1;31mE (1110) OBDLINK_EMULATOR: Enabled bluedroid[0m
+[1;31mE (1110) OBDLINK_EMULATOR: Sniff mode disabled via BTM_SetDefaultLinkPolicy[0m
+[0;32mI (1110) OBDLINK_EMULATOR: ESP_SPP_INIT_EVT[0m
+[0;32mI (1120) OBDLINK_EMULATOR: ESP_SPP_START_EVT handle:129 sec_id:55 scn:1[0m
+[0;32mI (1130) OBDLINK_EMULATOR: event: 10[0m
+[0;32mI (1130) OBDLINK_EMULATOR: Own address:[ac:15:18:d4:ac:d6][0m
+[1;31mE (1130) OBDLINK_EMULATOR: about to hit init_uart[0m
+[1;31mE (1130) OBDLINK_EMULATOR: init uart[0m
+[1;31mE (1140) OBDLINK_EMULATOR: loop[0m
+[0;32mI (1140) main_task: Returned from app_main()[0m
+[1;31mE (1160) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (1260) OBDLINK_EMULATOR: loop[0m
+[1;31mE (1280) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (1380) OBDLINK_EMULATOR: loop[0m
+[1;31mE (1400) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (1500) OBDLINK_EMULATOR: loop[0m
+[1;31mE (1520) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (1620) OBDLINK_EMULATOR: loop[0m
+[1;31mE (1640) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (1740) OBDLINK_EMULATOR: loop[0m
+[1;31mE (1760) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (1860) OBDLINK_EMULATOR: loop[0m
+[1;31mE (1880) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (1980) OBDLINK_EMULATOR: loop[0m
+[1;31mE (2000) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (2100) OBDLINK_EMULATOR: loop[0m
+[1;31mE (2120) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (2220) OBDLINK_EMULATOR: loop[0m
+[1;31mE (2240) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (2340) OBDLINK_EMULATOR: loop[0m
+[1;31mE (2360) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (2460) OBDLINK_EMULATOR: loop[0m
+[1;31mE (2480) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (2580) OBDLINK_EMULATOR: loop[0m
+[1;31mE (2600) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (2700) OBDLINK_EMULATOR: loop[0m
+[1;31mE (2720) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (2820) OBDLINK_EMULATOR: loop[0m
+[1;31mE (2840) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (2940) OBDLINK_EMULATOR: loop[0m
+[1;31mE (2960) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (3060) OBDLINK_EMULATOR: loop[0m
+[1;31mE (3080) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (3180) OBDLINK_EMULATOR: loop[0m
+[1;31mE (3200) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (3300) OBDLINK_EMULATOR: loop[0m
+[1;31mE (3320) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (3420) OBDLINK_EMULATOR: loop[0m
+[1;31mE (3440) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (3540) OBDLINK_EMULATOR: loop[0m
+[1;31mE (3560) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (3660) OBDLINK_EMULATOR: loop[0m
+[1;31mE (3680) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (3780) OBDLINK_EMULATOR: loop[0m
+[1;31mE (3800) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (3900) OBDLINK_EMULATOR: loop[0m
+[1;31mE (3920) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (4020) OBDLINK_EMULATOR: loop[0m
+[1;31mE (4040) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (4140) OBDLINK_EMULATOR: loop[0m
+[1;31mE (4160) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (4260) OBDLINK_EMULATOR: loop[0m
+[1;31mE (4280) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (4380) OBDLINK_EMULATOR: loop[0m
+[1;31mE (4400) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (4500) OBDLINK_EMULATOR: loop[0m
+[1;31mE (4520) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (4620) OBDLINK_EMULATOR: loop[0m
+[1;31mE (4640) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (4740) OBDLINK_EMULATOR: loop[0m
+[1;31mE (4760) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (4860) OBDLINK_EMULATOR: loop[0m
+[1;31mE (4880) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (4980) OBDLINK_EMULATOR: loop[0m
+[1;31mE (5000) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (5100) OBDLINK_EMULATOR: loop[0m
+[1;31mE (5120) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (5220) OBDLINK_EMULATOR: loop[0m
+[1;31mE (5240) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (5340) OBDLINK_EMULATOR: loop[0m
+[1;31mE (5360) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (5460) OBDLINK_EMULATOR: loop[0m
+[1;31mE (5480) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (5580) OBDLINK_EMULATOR: loop[0m
+[1;31mE (5600) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (5700) OBDLINK_EMULATOR: loop[0m
+[1;31mE (5720) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (5820) OBDLINK_EMULATOR: loop[0m
+[1;31mE (5840) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (5940) OBDLINK_EMULATOR: loop[0m
+[1;31mE (5960) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (6060) OBDLINK_EMULATOR: loop[0m
+[1;31mE (6080) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (6180) OBDLINK_EMULATOR: loop[0m
+[1;31mE (6200) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (6300) OBDLINK_EMULATOR: loop[0m
+[1;31mE (6320) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (6420) OBDLINK_EMULATOR: loop[0m
+[1;31mE (6440) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (6540) OBDLINK_EMULATOR: loop[0m
+[1;31mE (6560) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (6660) OBDLINK_EMULATOR: loop[0m
+[1;31mE (6680) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (6780) OBDLINK_EMULATOR: loop[0m
+[1;31mE (6800) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (6900) OBDLINK_EMULATOR: loop[0m
+[1;31mE (6920) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (7020) OBDLINK_EMULATOR: loop[0m
+[1;31mE (7040) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (7140) OBDLINK_EMULATOR: loop[0m
+[1;31mE (7160) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (7260) OBDLINK_EMULATOR: loop[0m
+[1;31mE (7280) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (7380) OBDLINK_EMULATOR: loop[0m
+[1;31mE (7400) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (7500) OBDLINK_EMULATOR: loop[0m
+[1;31mE (7520) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (7620) OBDLINK_EMULATOR: loop[0m
+[1;31mE (7640) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (7740) OBDLINK_EMULATOR: loop[0m
+[1;31mE (7760) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (7860) OBDLINK_EMULATOR: loop[0m
+[1;31mE (7880) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (7980) OBDLINK_EMULATOR: loop[0m
+[1;31mE (8000) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (8100) OBDLINK_EMULATOR: loop[0m
+[1;31mE (8120) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (8220) OBDLINK_EMULATOR: loop[0m
+[1;31mE (8240) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (8340) OBDLINK_EMULATOR: loop[0m
+[1;31mE (8360) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (8460) OBDLINK_EMULATOR: loop[0m
+[1;31mE (8480) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (8580) OBDLINK_EMULATOR: loop[0m
+[1;31mE (8600) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (8700) OBDLINK_EMULATOR: loop[0m
+[1;31mE (8720) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (8820) OBDLINK_EMULATOR: loop[0m
+[1;31mE (8840) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (8940) OBDLINK_EMULATOR: loop[0m
+[1;31mE (8960) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (9060) OBDLINK_EMULATOR: loop[0m
+[1;31mE (9080) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (9180) OBDLINK_EMULATOR: loop[0m
+[1;31mE (9200) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (9300) OBDLINK_EMULATOR: loop[0m
+[1;31mE (9320) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (9420) OBDLINK_EMULATOR: loop[0m
+[1;31mE (9440) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (9540) OBDLINK_EMULATOR: loop[0m
+[1;31mE (9560) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (9660) OBDLINK_EMULATOR: loop[0m
+[1;31mE (9680) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (9780) OBDLINK_EMULATOR: loop[0m
+[1;31mE (9800) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (9900) OBDLINK_EMULATOR: loop[0m
+[1;31mE (9920) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (10020) OBDLINK_EMULATOR: loop[0m
+[1;31mE (10020) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (10120) OBDLINK_EMULATOR: loop[0m
+[1;31mE (10140) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (10240) OBDLINK_EMULATOR: loop[0m
+[1;31mE (10260) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (10360) OBDLINK_EMULATOR: loop[0m
+[1;31mE (10380) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (10480) OBDLINK_EMULATOR: loop[0m
+[1;31mE (10500) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (10600) OBDLINK_EMULATOR: loop[0m
+[1;31mE (10620) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (10720) OBDLINK_EMULATOR: loop[0m
+[1;31mE (10740) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (10840) OBDLINK_EMULATOR: loop[0m
+[1;31mE (10860) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (10960) OBDLINK_EMULATOR: loop[0m
+[1;31mE (10980) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (11080) OBDLINK_EMULATOR: loop[0m
+[1;31mE (11100) OBDLINK_EMULATOR: read bytes length: 0[0m
+[1;31mE (11200) OBDLINK_EMULATOR: loop[0m
+[1;31mE (11200) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (11300) OBDLINK_EMULATOR: loop[0m
+[1;31mE (11300) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (11400) OBDLINK_EMULATOR: loop[0m
+[1;31mE (11400) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (11500) OBDLINK_EMULATOR: loop[0m
+[1;31mE (11500) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (11600) OBDLINK_EMULATOR: loop[0m
+[1;31mE (11600) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (11700) OBDLINK_EMULATOR: loop[0m
+[1;31mE (11700) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (11800) OBDLINK_EMULATOR: loop[0m
+[1;31mE (11800) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (11900) OBDLINK_EMULATOR: loop[0m
+[1;31mE (11900) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (12000) OBDLINK_EMULATOR: loop[0m
+[1;31mE (12000) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (12100) OBDLINK_EMULATOR: loop[0m
+[1;31mE (12100) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (12200) OBDLINK_EMULATOR: loop[0m
+[1;31mE (12200) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (12300) OBDLINK_EMULATOR: loop[0m
+[1;31mE (12300) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (12400) OBDLINK_EMULATOR: loop[0m
+[1;31mE (12400) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (12500) OBDLINK_EMULATOR: loop[0m
+[1;31mE (12500) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (12600) OBDLINK_EMULATOR: loop[0m
+[1;31mE (12600) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (12700) OBDLINK_EMULATOR: loop[0m
+[1;31mE (12700) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (12800) OBDLINK_EMULATOR: loop[0m
+[1;31mE (12800) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (12900) OBDLINK_EMULATOR: loop[0m
+[1;31mE (12900) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (13000) OBDLINK_EMULATOR: loop[0m
+[1;31mE (13000) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (13100) OBDLINK_EMULATOR: loop[0m
+[1;31mE (13100) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (13200) OBDLINK_EMULATOR: loop[0m
+[1;31mE (13200) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (13300) OBDLINK_EMULATOR: loop[0m
+[1;31mE (13300) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (13400) OBDLINK_EMULATOR: loop[0m
+[1;31mE (13400) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (13500) OBDLINK_EMULATOR: loop[0m
+[1;31mE (13500) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (13600) OBDLINK_EMULATOR: loop[0m
+[1;31mE (13600) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (13700) OBDLINK_EMULATOR: loop[0m
+[1;31mE (13700) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (13800) OBDLINK_EMULATOR: loop[0m
+[1;31mE (13800) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (13900) OBDLINK_EMULATOR: loop[0m
+[1;31mE (13900) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (14000) OBDLINK_EMULATOR: loop[0m
+[1;31mE (14000) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (14100) OBDLINK_EMULATOR: loop[0m
+[1;31mE (14100) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (14200) OBDLINK_EMULATOR: loop[0m
+[1;31mE (14200) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (14300) OBDLINK_EMULATOR: loop[0m
+[1;31mE (14300) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (14400) OBDLINK_EMULATOR: loop[0m
+[1;31mE (14400) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (14500) OBDLINK_EMULATOR: loop[0m
+[1;31mE (14500) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (14600) OBDLINK_EMULATOR: loop[0m
+[1;31mE (14600) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (14700) OBDLINK_EMULATOR: loop[0m
+[1;31mE (14700) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (14800) OBDLINK_EMULATOR: loop[0m
+[1;31mE (14800) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (14900) OBDLINK_EMULATOR: loop[0m
+[1;31mE (14900) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (15000) OBDLINK_EMULATOR: loop[0m
+[1;31mE (15000) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (15100) OBDLINK_EMULATOR: loop[0m
+[1;31mE (15100) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (15200) OBDLINK_EMULATOR: loop[0m
+[1;31mE (15200) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (15300) OBDLINK_EMULATOR: loop[0m
+[1;31mE (15300) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (15400) OBDLINK_EMULATOR: loop[0m
+[1;31mE (15400) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (15500) OBDLINK_EMULATOR: loop[0m
+[1;31mE (15500) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (15600) OBDLINK_EMULATOR: loop[0m
+[1;31mE (15600) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (15700) OBDLINK_EMULATOR: loop[0m
+[1;31mE (15700) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (15800) OBDLINK_EMULATOR: loop[0m
+[1;31mE (15800) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (15900) OBDLINK_EMULATOR: loop[0m
+[1;31mE (15900) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (16000) OBDLINK_EMULATOR: loop[0m
+[1;31mE (16000) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (16100) OBDLINK_EMULATOR: loop[0m
+[1;31mE (16100) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (16200) OBDLINK_EMULATOR: loop[0m
+[1;31mE (16200) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (16300) OBDLINK_EMULATOR: loop[0m
+[1;31mE (16300) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (16400) OBDLINK_EMULATOR: loop[0m
+[1;31mE (16400) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (16500) OBDLINK_EMULATOR: loop[0m
+[1;31mE (16500) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (16600) OBDLINK_EMULATOR: loop[0m
+[1;31mE (16600) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (16700) OBDLINK_EMULATOR: loop[0m
+[1;31mE (16700) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (16800) OBDLINK_EMULATOR: loop[0m
+[1;31mE (16800) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (16900) OBDLINK_EMULATOR: loop[0m
+[1;31mE (16900) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (17000) OBDLINK_EMULATOR: loop[0m
+[1;31mE (17000) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (17100) OBDLINK_EMULATOR: loop[0m
+[1;31mE (17100) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (17200) OBDLINK_EMULATOR: loop[0m
+[1;31mE (17200) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (17300) OBDLINK_EMULATOR: loop[0m
+[1;31mE (17300) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (17400) OBDLINK_EMULATOR: loop[0m
+[1;31mE (17400) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (17500) OBDLINK_EMULATOR: loop[0m
+[1;31mE (17500) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (17600) OBDLINK_EMULATOR: loop[0m
+[1;31mE (17600) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (17700) OBDLINK_EMULATOR: loop[0m
+[1;31mE (17700) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (17800) OBDLINK_EMULATOR: loop[0m
+[1;31mE (17800) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (17900) OBDLINK_EMULATOR: loop[0m
+[1;31mE (17900) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (18000) OBDLINK_EMULATOR: loop[0m
+[1;31mE (18000) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (18100) OBDLINK_EMULATOR: loop[0m
+[1;31mE (18100) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (18200) OBDLINK_EMULATOR: loop[0m
+[1;31mE (18200) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (18300) OBDLINK_EMULATOR: loop[0m
+[1;31mE (18300) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (18400) OBDLINK_EMULATOR: loop[0m
+[1;31mE (18400) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (18500) OBDLINK_EMULATOR: loop[0m
+[1;31mE (18500) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (18600) OBDLINK_EMULATOR: loop[0m
+[1;31mE (18600) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (18700) OBDLINK_EMULATOR: loop[0m
+[1;31mE (18700) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (18800) OBDLINK_EMULATOR: loop[0m
+[1;31mE (18800) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (18900) OBDLINK_EMULATOR: loop[0m
+[1;31mE (18900) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (19000) OBDLINK_EMULATOR: loop[0m
+[1;31mE (19000) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (19100) OBDLINK_EMULATOR: loop[0m
+[1;31mE (19100) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (19200) OBDLINK_EMULATOR: loop[0m
+[1;31mE (19200) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (19300) OBDLINK_EMULATOR: loop[0m
+[1;31mE (19300) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (19400) OBDLINK_EMULATOR: loop[0m
+[1;31mE (19400) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (19500) OBDLINK_EMULATOR: loop[0m
+[1;31mE (19500) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (19600) OBDLINK_EMULATOR: loop[0m
+[1;31mE (19600) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (19700) OBDLINK_EMULATOR: loop[0m
+[1;31mE (19700) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (19800) OBDLINK_EMULATOR: loop[0m
+[1;31mE (19800) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (19900) OBDLINK_EMULATOR: loop[0m
+[1;31mE (19900) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (20000) OBDLINK_EMULATOR: loop[0m
+[1;31mE (20000) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (20100) OBDLINK_EMULATOR: loop[0m
+[1;31mE (20100) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (20200) OBDLINK_EMULATOR: loop[0m
+[1;31mE (20200) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (20300) OBDLINK_EMULATOR: loop[0m
+[1;31mE (20300) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (20400) OBDLINK_EMULATOR: loop[0m
+[1;31mE (20400) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (20500) OBDLINK_EMULATOR: loop[0m
+[1;31mE (20500) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (20600) OBDLINK_EMULATOR: loop[0m
+[1;31mE (20600) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (20700) OBDLINK_EMULATOR: loop[0m
+[1;31mE (20700) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (20800) OBDLINK_EMULATOR: loop[0m
+[1;31mE (20800) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (20900) OBDLINK_EMULATOR: loop[0m
+[1;31mE (20900) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (21000) OBDLINK_EMULATOR: loop[0m
+[1;31mE (21000) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (21100) OBDLINK_EMULATOR: loop[0m
+[1;31mE (21100) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (21200) OBDLINK_EMULATOR: loop[0m
+[1;31mE (21200) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (21300) OBDLINK_EMULATOR: loop[0m
+[1;31mE (21300) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (21400) OBDLINK_EMULATOR: loop[0m
+[1;31mE (21400) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (21500) OBDLINK_EMULATOR: loop[0m
+[1;31mE (21500) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (21600) OBDLINK_EMULATOR: loop[0m
+[1;31mE (21600) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (21700) OBDLINK_EMULATOR: loop[0m
+[1;31mE (21700) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (21800) OBDLINK_EMULATOR: loop[0m
+[1;31mE (21800) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (21900) OBDLINK_EMULATOR: loop[0m
+[1;31mE (21900) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (22000) OBDLINK_EMULATOR: loop[0m
+[1;31mE (22000) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (22100) OBDLINK_EMULATOR: loop[0m
+[1;31mE (22100) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (22200) OBDLINK_EMULATOR: loop[0m
+[1;31mE (22200) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (22300) OBDLINK_EMULATOR: loop[0m
+[1;31mE (22300) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (22400) OBDLINK_EMULATOR: loop[0m
+[1;31mE (22400) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (22500) OBDLINK_EMULATOR: loop[0m
+[1;31mE (22500) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (22600) OBDLINK_EMULATOR: loop[0m
+[1;31mE (22600) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (22700) OBDLINK_EMULATOR: loop[0m
+[1;31mE (22700) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (22800) OBDLINK_EMULATOR: loop[0m
+[1;31mE (22800) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (22900) OBDLINK_EMULATOR: loop[0m
+[1;31mE (22900) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (23000) OBDLINK_EMULATOR: loop[0m
+[1;31mE (23000) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (23100) OBDLINK_EMULATOR: loop[0m
+[1;31mE (23100) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (23200) OBDLINK_EMULATOR: loop[0m
+[1;31mE (23200) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (23300) OBDLINK_EMULATOR: loop[0m
+[1;31mE (23300) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (23400) OBDLINK_EMULATOR: loop[0m
+[1;31mE (23400) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (23500) OBDLINK_EMULATOR: loop[0m
+[1;31mE (23500) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (23600) OBDLINK_EMULATOR: loop[0m
+[1;31mE (23600) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (23700) OBDLINK_EMULATOR: loop[0m
+[1;31mE (23700) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (23800) OBDLINK_EMULATOR: loop[0m
+[1;31mE (23800) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (23900) OBDLINK_EMULATOR: loop[0m
+[1;31mE (23900) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (24000) OBDLINK_EMULATOR: loop[0m
+[1;31mE (24000) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (24100) OBDLINK_EMULATOR: loop[0m
+[1;31mE (24100) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (24200) OBDLINK_EMULATOR: loop[0m
+[1;31mE (24200) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (24300) OBDLINK_EMULATOR: loop[0m
+[1;31mE (24300) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (24400) OBDLINK_EMULATOR: loop[0m
+[1;31mE (24400) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (24500) OBDLINK_EMULATOR: loop[0m
+[1;31mE (24500) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (24600) OBDLINK_EMULATOR: loop[0m
+[1;31mE (24600) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (24700) OBDLINK_EMULATOR: loop[0m
+[1;31mE (24700) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (24800) OBDLINK_EMULATOR: loop[0m
+[1;31mE (24800) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (24900) OBDLINK_EMULATOR: loop[0m
+[1;31mE (24900) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (25000) OBDLINK_EMULATOR: loop[0m
+[1;31mE (25000) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (25100) OBDLINK_EMULATOR: loop[0m
+[1;31mE (25100) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (25200) OBDLINK_EMULATOR: loop[0m
+[1;31mE (25200) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (25300) OBDLINK_EMULATOR: loop[0m
+[1;31mE (25300) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (25400) OBDLINK_EMULATOR: loop[0m
+[1;31mE (25400) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (25500) OBDLINK_EMULATOR: loop[0m
+[1;31mE (25500) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (25600) OBDLINK_EMULATOR: loop[0m
+[1;31mE (25600) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (25700) OBDLINK_EMULATOR: loop[0m
+[1;31mE (25700) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (25800) OBDLINK_EMULATOR: loop[0m
+[1;31mE (25800) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (25900) OBDLINK_EMULATOR: loop[0m
+[1;31mE (25900) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (26000) OBDLINK_EMULATOR: loop[0m
+[1;31mE (26000) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (26100) OBDLINK_EMULATOR: loop[0m
+[1;31mE (26100) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (26200) OBDLINK_EMULATOR: loop[0m
+[1;31mE (26200) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (26300) OBDLINK_EMULATOR: loop[0m
+[1;31mE (26300) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (26400) OBDLINK_EMULATOR: loop[0m
+[1;31mE (26400) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (26500) OBDLINK_EMULATOR: loop[0m
+[1;31mE (26500) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (26600) OBDLINK_EMULATOR: loop[0m
+[1;31mE (26600) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (26700) OBDLINK_EMULATOR: loop[0m
+[1;31mE (26700) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (26800) OBDLINK_EMULATOR: loop[0m
+[1;31mE (26800) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (26900) OBDLINK_EMULATOR: loop[0m
+[1;31mE (26900) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (27000) OBDLINK_EMULATOR: loop[0m
+[1;31mE (27000) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (27100) OBDLINK_EMULATOR: loop[0m
+[1;31mE (27100) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (27200) OBDLINK_EMULATOR: loop[0m
+[1;31mE (27200) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (27300) OBDLINK_EMULATOR: loop[0m
+[1;31mE (27300) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (27400) OBDLINK_EMULATOR: loop[0m
+[1;31mE (27400) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (27500) OBDLINK_EMULATOR: loop[0m
+[1;31mE (27500) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (27600) OBDLINK_EMULATOR: loop[0m
+[1;31mE (27600) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (27700) OBDLINK_EMULATOR: loop[0m
+[1;31mE (27700) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (27800) OBDLINK_EMULATOR: loop[0m
+[1;31mE (27800) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (27900) OBDLINK_EMULATOR: loop[0m
+[1;31mE (27900) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (28000) OBDLINK_EMULATOR: loop[0m
+[1;31mE (28000) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (28100) OBDLINK_EMULATOR: loop[0m
+[1;31mE (28100) OBDLINK_EMULATOR: read bytes length: 1[0m
+[1;31mE (28200) OBDLINK_EMULATOR: loop[0m
