@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/shake/esp/solostorm_logger/build/esp-idf/mbedtls/mbedtls/cmake_install.cmake")
+  include("C:/_dev/ESP32_SoloStorm_Logger/build/esp-idf/mbedtls/mbedtls/cmake_install.cmake")
 endif()
 

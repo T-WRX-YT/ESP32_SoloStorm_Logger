@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/shake/esp/solostorm_logger/main
+# Install script for directory: C:/_dev/ESP32_SoloStorm_Logger/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

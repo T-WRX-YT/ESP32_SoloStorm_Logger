@@ -18,8 +18,8 @@ end
 
 # Load bootloader symbols
 set confirm off
-    add-symbol-file C:/Users/shake/esp/solostorm_logger/build/bootloader/bootloader.elf
+    add-symbol-file C:/_dev/ESP32_SoloStorm_Logger/build/bootloader/bootloader.elf
 set confirm on
 
 # Load application symbols
-file C:/Users/shake/esp/solostorm_logger/build/bt_spp_acceptor_demo.elf
+file C:/_dev/ESP32_SoloStorm_Logger/build/bt_spp_acceptor_demo.elf

@@ -1,2 +1,2 @@
-source C:/Users/shake/esp/solostorm_logger/build/gdbinit/symbols
-source C:/Users/shake/esp/solostorm_logger/build/gdbinit/connect
+source C:/_dev/ESP32_SoloStorm_Logger/build/gdbinit/symbols
+source C:/_dev/ESP32_SoloStorm_Logger/build/gdbinit/connect

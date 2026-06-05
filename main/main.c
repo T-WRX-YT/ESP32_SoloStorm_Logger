@@ -63,9 +63,16 @@ static QueueHandle_t uart_queue;
 
 
 
-static void parse_data(const char *line, int *rpm, int *speed, int *throttle)
+// Teensy sends: coolant,intakeTemp,rpm,gear,speed,throttle,oilTemp,oilPress,fbKnock,fineKnock,boost,dam,afr
+static void parse_data(const char *line,
+    int *coolant, int *intakeTemp, int *rpm, int *gear, int *speed, int *throttle,
+    int *oilTemp, int *oilPress,
+    float *fbKnock, float *fineKnock, float *boost, float *dam, float *afr)
 {
-    sscanf(line, "%d,%d,%d", rpm, speed, throttle);
+    sscanf(line, "%d,%d,%d,%d,%d,%d,%d,%d,%f,%f,%f,%f,%f",
+        coolant, intakeTemp, rpm, gear, speed, throttle,
+        oilTemp, oilPress,
+        fbKnock, fineKnock, boost, dam, afr);
 }
 
 
@@ -89,10 +96,12 @@ void my_loop_task(void *arg) {
     uint8_t byte;
     char line[RX_BUF_SIZE];
     int index = 0;
-    int rpm = 0, speed = 0, throttle = 0;
+    int coolant = 0, intakeTemp = 0, rpm = 0, gear = 0, speed = 0, throttle = 0;
+    int oilTemp = 0, oilPress = 0;
+    float fbKnock = 0, fineKnock = 0, boost = 0, dam = 0, afr = 0;
 
     while (1) {
-		
+
         //if (uart_read_bytes(UART_PORT, &byte, 1, pdMS_TO_TICKS(5)) > 0) {
 		if ((uart_read_bytes(UART_PORT, &byte, 1, 0) > 0) && isConnected) {
             /*
@@ -113,8 +122,9 @@ void my_loop_task(void *arg) {
 					line[index] = '\0';
 					ESP_LOGI(SPP_TAG, "Line: '%s'", line);
 
-					parse_data(line, &rpm, &speed, &throttle);
-					ESP_LOGI(SPP_TAG, "RPM: %d | Speed: %d | Throttle: %d", rpm, speed, throttle);
+					parse_data(line, &coolant, &intakeTemp, &rpm, &gear, &speed, &throttle, &oilTemp, &oilPress, &fbKnock, &fineKnock, &boost, &dam, &afr);
+					ESP_LOGI(SPP_TAG, "COOL:%d IAT:%d RPM:%d GEAR:%d SPD:%d THR:%d OILT:%d OILP:%d FB:%.2f FN:%.2f BST:%.2f DAM:%.2f AFR:%.2f",
+						coolant, intakeTemp, rpm, gear, speed, throttle, oilTemp, oilPress, fbKnock, fineKnock, boost, dam, afr);
 					index = 0;
 
 					// Send over Bluetooth immediately if connected and allowed
@@ -406,18 +416,20 @@ void uart_event_task(void *pvParameters)
     uint8_t data[RX_BUF_SIZE];
     char line[RX_BUF_SIZE];
     int index = 0;
-    int rpm, speed, throttle;
+    int coolant, intakeTemp, rpm, gear, speed, throttle, oilTemp, oilPress;
+    float fbKnock, fineKnock, boost, dam, afr;
 
     while (xQueueReceive(uart_queue, (void *)&event, portMAX_DELAY)) {
         if (event.type == UART_DATA && event.size) {
             int len = uart_read_bytes(UART_PORT, data, event.size, portMAX_DELAY);
-            if (isConnected) {
+            //if (isConnected) {
 				for (int i = 0; i < len; i++) {
 					if (data[i] == '\n') {
 						line[index] = '\0';
-						//ESP_LOGI(SPP_TAG, "Line: '%s'", line);
-						parse_data(line, &rpm, &speed, &throttle);
-						//ESP_LOGI(SPP_TAG, "Parsed: RPM=%d Speed=%d Throttle=%d", rpm, speed, throttle);
+						ESP_LOGI(SPP_TAG, "Line: '%s'", line);
+						parse_data(line, &coolant, &intakeTemp, &rpm, &gear, &speed, &throttle, &oilTemp, &oilPress, &fbKnock, &fineKnock, &boost, &dam, &afr);
+						ESP_LOGI(SPP_TAG, "COOL:%d IAT:%d RPM:%d GEAR:%d SPD:%d THR:%d OILT:%d OILP:%d FB:%.2f FN:%.2f BST:%.2f DAM:%.2f AFR:%.2f",
+							coolant, intakeTemp, rpm, gear, speed, throttle, oilTemp, oilPress, fbKnock, fineKnock, boost, dam, afr);
 
 						if (isConnected && sendData && protocolMode == 1) {
 							char bt_buf[64];
@@ -435,7 +447,7 @@ void uart_event_task(void *pvParameters)
 						index = 0;  // overflow protection
 					}
 				}
-			}
+			//}
         }
     }
 
@@ -532,7 +544,7 @@ void app_main(void)
 
 
     uart_config_t config = {
-        .baud_rate  = 9600,
+        .baud_rate  = 500000,
         .data_bits  = UART_DATA_8_BITS,
         .parity     = UART_PARITY_DISABLE,
         .stop_bits  = UART_STOP_BITS_1,

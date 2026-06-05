@@ -10,18 +10,18 @@ if(NOT EXISTS "C:/Espressif/frameworks/esp-idf-v5.4.1/components/bootloader/subp
   file(MAKE_DIRECTORY "C:/Espressif/frameworks/esp-idf-v5.4.1/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "C:/Users/shake/esp/solostorm_logger/build/bootloader"
-  "C:/Users/shake/esp/solostorm_logger/build/bootloader-prefix"
-  "C:/Users/shake/esp/solostorm_logger/build/bootloader-prefix/tmp"
-  "C:/Users/shake/esp/solostorm_logger/build/bootloader-prefix/src/bootloader-stamp"
-  "C:/Users/shake/esp/solostorm_logger/build/bootloader-prefix/src"
-  "C:/Users/shake/esp/solostorm_logger/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/_dev/ESP32_SoloStorm_Logger/build/bootloader"
+  "C:/_dev/ESP32_SoloStorm_Logger/build/bootloader-prefix"
+  "C:/_dev/ESP32_SoloStorm_Logger/build/bootloader-prefix/tmp"
+  "C:/_dev/ESP32_SoloStorm_Logger/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/_dev/ESP32_SoloStorm_Logger/build/bootloader-prefix/src"
+  "C:/_dev/ESP32_SoloStorm_Logger/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/Users/shake/esp/solostorm_logger/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/_dev/ESP32_SoloStorm_Logger/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "C:/Users/shake/esp/solostorm_logger/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/_dev/ESP32_SoloStorm_Logger/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

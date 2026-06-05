@@ -33,7 +33,7 @@ void printHexDump(uint8_t* data, size_t length);
 
 void setup() {
   Serial.begin(115200);
-  Serial2.begin(9600, SERIAL_8N1, 16, 17);  // RX2 -> GPIO16, TX2 -> GPIO17
+  Serial2.begin(500000, SERIAL_8N1, 16, 17);  // RX2 -> GPIO16, TX2 -> GPIO17
   Serial.println("begin");
 }
 
@@ -78,11 +78,16 @@ void processSerial() {
 
     //Serial.println(incomingData);
 
-    int firstComma = incomingData.indexOf(',');
-    int secondComma = incomingData.indexOf(',', firstComma + 1);
+    // Teensy sends: coolant[0],intakeTemp[1],rpm[2],gear[3],speed[4],throttle[5],...
+    int c0 = incomingData.indexOf(',');
+    int c1 = incomingData.indexOf(',', c0 + 1);
+    int c2 = incomingData.indexOf(',', c1 + 1);
+    int c3 = incomingData.indexOf(',', c2 + 1);
+    int c4 = incomingData.indexOf(',', c3 + 1);
+    int c5 = incomingData.indexOf(',', c4 + 1);
 
-    rpm = incomingData.substring(0, firstComma).toInt();
-    speed = incomingData.substring(firstComma + 1, secondComma).toInt();
-    throttle = incomingData.substring(secondComma + 1).toInt();
+    rpm      = incomingData.substring(c1 + 1, c2).toInt();
+    speed    = incomingData.substring(c3 + 1, c4).toInt();
+    throttle = incomingData.substring(c4 + 1, c5).toInt();
   }
 }

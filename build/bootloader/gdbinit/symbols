@@ -22,4 +22,4 @@ set confirm off
 set confirm on
 
 # Load application symbols
-file C:/Users/shake/esp/solostorm_logger/build/bootloader/bootloader.elf
+file C:/_dev/ESP32_SoloStorm_Logger/build/bootloader/bootloader.elf
