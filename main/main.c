@@ -63,15 +63,15 @@ static QueueHandle_t uart_queue;
 
 
 
-// Teensy sends: coolant,intakeTemp,rpm,gear,speed,throttle,oilTemp,oilPress,fbKnock,fineKnock,boost,dam,afr
+// Teensy sends: coolant,intakeTemp,rpm,gear,speed,throttle,oilTemp,oilPress,diffTemp,dccd,brake,fbKnock,fineKnock,boost,dam,afr
 static void parse_data(const char *line,
     int *coolant, int *intakeTemp, int *rpm, int *gear, int *speed, int *throttle,
-    int *oilTemp, int *oilPress,
+    int *oilTemp, int *oilPress, int *diffTemp, int *dccd, int *brake,
     float *fbKnock, float *fineKnock, float *boost, float *dam, float *afr)
 {
-    sscanf(line, "%d,%d,%d,%d,%d,%d,%d,%d,%f,%f,%f,%f,%f",
+    sscanf(line, "%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%f,%f,%f,%f,%f",
         coolant, intakeTemp, rpm, gear, speed, throttle,
-        oilTemp, oilPress,
+        oilTemp, oilPress, diffTemp, dccd, brake,
         fbKnock, fineKnock, boost, dam, afr);
 }
 
@@ -97,7 +97,7 @@ void my_loop_task(void *arg) {
     char line[RX_BUF_SIZE];
     int index = 0;
     int coolant = 0, intakeTemp = 0, rpm = 0, gear = 0, speed = 0, throttle = 0;
-    int oilTemp = 0, oilPress = 0;
+    int oilTemp = 0, oilPress = 0, diffTemp = 0, dccd = 0, brake = 0;
     float fbKnock = 0, fineKnock = 0, boost = 0, dam = 0, afr = 0;
 
     while (1) {
@@ -122,9 +122,9 @@ void my_loop_task(void *arg) {
 					line[index] = '\0';
 					ESP_LOGI(SPP_TAG, "Line: '%s'", line);
 
-					parse_data(line, &coolant, &intakeTemp, &rpm, &gear, &speed, &throttle, &oilTemp, &oilPress, &fbKnock, &fineKnock, &boost, &dam, &afr);
-					ESP_LOGI(SPP_TAG, "COOL:%d IAT:%d RPM:%d GEAR:%d SPD:%d THR:%d OILT:%d OILP:%d FB:%.2f FN:%.2f BST:%.2f DAM:%.2f AFR:%.2f",
-						coolant, intakeTemp, rpm, gear, speed, throttle, oilTemp, oilPress, fbKnock, fineKnock, boost, dam, afr);
+					parse_data(line, &coolant, &intakeTemp, &rpm, &gear, &speed, &throttle, &oilTemp, &oilPress, &diffTemp, &dccd, &brake, &fbKnock, &fineKnock, &boost, &dam, &afr);
+					ESP_LOGI(SPP_TAG, "COOL:%d IAT:%d RPM:%d GEAR:%d SPD:%d THR:%d OILT:%d OILP:%d DIFFT:%d DCCD:%d BRK:%d FB:%.2f FN:%.2f BST:%.2f DAM:%.2f AFR:%.2f",
+						coolant, intakeTemp, rpm, gear, speed, throttle, oilTemp, oilPress, diffTemp, dccd, brake, fbKnock, fineKnock, boost, dam, afr);
 					index = 0;
 
 					// Send over Bluetooth immediately if connected and allowed
@@ -416,7 +416,7 @@ void uart_event_task(void *pvParameters)
     uint8_t data[RX_BUF_SIZE];
     char line[RX_BUF_SIZE];
     int index = 0;
-    int coolant, intakeTemp, rpm, gear, speed, throttle, oilTemp, oilPress;
+    int coolant, intakeTemp, rpm, gear, speed, throttle, oilTemp, oilPress, diffTemp, dccd, brake;
     float fbKnock, fineKnock, boost, dam, afr;
 
     while (xQueueReceive(uart_queue, (void *)&event, portMAX_DELAY)) {
@@ -427,9 +427,9 @@ void uart_event_task(void *pvParameters)
 					if (data[i] == '\n') {
 						line[index] = '\0';
 						ESP_LOGI(SPP_TAG, "Line: '%s'", line);
-						parse_data(line, &coolant, &intakeTemp, &rpm, &gear, &speed, &throttle, &oilTemp, &oilPress, &fbKnock, &fineKnock, &boost, &dam, &afr);
-						ESP_LOGI(SPP_TAG, "COOL:%d IAT:%d RPM:%d GEAR:%d SPD:%d THR:%d OILT:%d OILP:%d FB:%.2f FN:%.2f BST:%.2f DAM:%.2f AFR:%.2f",
-							coolant, intakeTemp, rpm, gear, speed, throttle, oilTemp, oilPress, fbKnock, fineKnock, boost, dam, afr);
+						parse_data(line, &coolant, &intakeTemp, &rpm, &gear, &speed, &throttle, &oilTemp, &oilPress, &diffTemp, &dccd, &brake, &fbKnock, &fineKnock, &boost, &dam, &afr);
+						ESP_LOGI(SPP_TAG, "COOL:%d IAT:%d RPM:%d GEAR:%d SPD:%d THR:%d OILT:%d OILP:%d DIFFT:%d DCCD:%d BRK:%d FB:%.2f FN:%.2f BST:%.2f DAM:%.2f AFR:%.2f",
+							coolant, intakeTemp, rpm, gear, speed, throttle, oilTemp, oilPress, diffTemp, dccd, brake, fbKnock, fineKnock, boost, dam, afr);
 
 						if (isConnected && sendData && protocolMode == 1) {
 							char bt_buf[64];

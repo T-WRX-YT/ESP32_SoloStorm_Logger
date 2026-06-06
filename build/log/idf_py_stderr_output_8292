@@ -1,0 +1,108 @@
+Command: C:\Espressif\tools\python\v6.0.1\venv\Scripts\python.exe C:\esp\v6.0.1\esp-idf\tools/idf_monitor.py -p COM6 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\_dev\ESP32_SoloStorm_Logger\build\bt_spp_acceptor_demo.elf C:\_dev\ESP32_SoloStorm_Logger\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0.1\venv\Scripts\python.exe' 'C:\esp\v6.0.1\esp-idf\tools\idf.py'
+[0;33m--- Warning: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM6 instead...[0m
+[0;33m--- esp-idf-monitor 1.9.0 on \\.\COM6 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2227[0m
+[0m--- 0x40080644: [0;33mcall_start_cpu0[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m27[0m
+[0m--- 0x40081668: [0;33mcall_start_cpu1[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_system/port/cpu_start.c[0m[0m:[1;31m222[0m
+[0m--- 0x400d1dc8: [0;33m__esp_system_init_fn_init_efuse_check[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/efuse/src/esp_efuse_startup.c[0m[0m:[1;31m37[0m
+[0m--- 0x400d28e4: [0;33m__esp_system_init_fn_init_show_cpu_freq[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_system/startup_funcs.c[0m[0m:[1;31m53[0m
+[0m--- 0x400d1d08: [0;33m__esp_system_init_fn_init_show_app_info[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_app_format/esp_app_desc.c[0m[0m:[1;31m123[0m
+[0m--- 0x400d1ddc: [0;33m__esp_system_init_fn_init_efuse_show_app_info[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/efuse/src/esp_efuse_startup.c[0m[0m:[1;31m47[0m
+[0m--- 0x400d3d34: [0;33m__esp_system_init_fn_init_heap[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/heap_caps_init.c[0m[0m:[1;31m26[0m
+[0m--- 0x40080000: [0;33m_WindowOverflow4[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2019[0m
+[0m--- 0x40080000: [0;33m_WindowOverflow4[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2019[0m
+[0m--- 0x40000000: [0;33m_WindowOverflow4[0m[0m in [0;32mROM[0m
+[0m--- 0x40000000: [0;33m_WindowOverflow4[0m[0m in [0;32mROM[0m
+[0m--- 0x40080000: [0;33m_WindowOverflow4[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2019[0m
+[0m--- 0x40080000: [0;33m_WindowOverflow4[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2019[0m
+[0m--- 0x40080000: [0;33m_WindowOverflow4[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2019[0m
+[0m--- 0x40080000: [0;33m_WindowOverflow4[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2019[0m
+[0m--- 0x40082000: [0;33mefuse_ll_get_chip_wafer_version_minor[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/hal/esp32/include/hal/efuse_ll.h[0m[0m:[1;31m115[0m
+[0m--- (inlined by) [0;33mefuse_hal_get_minor_chip_version[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/hal/esp32/efuse_hal.c[0m[0m:[1;31m49[0m
+[0m--- 0x40080000: [0;33m_WindowOverflow4[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2019[0m
+[0m--- 0x40082000: [0;33mefuse_ll_get_chip_wafer_version_minor[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/hal/esp32/include/hal/efuse_ll.h[0m[0m:[1;31m115[0m
+[0m--- (inlined by) [0;33mefuse_hal_get_minor_chip_version[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/hal/esp32/efuse_hal.c[0m[0m:[1;31m49[0m
+[0m--- 0x40080000: [0;33m_WindowOverflow4[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2019[0m
+[0m--- 0x40082000: [0;33mefuse_ll_get_chip_wafer_version_minor[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/hal/esp32/include/hal/efuse_ll.h[0m[0m:[1;31m115[0m
+[0m--- (inlined by) [0;33mefuse_hal_get_minor_chip_version[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/hal/esp32/efuse_hal.c[0m[0m:[1;31m49[0m
+[0m--- 0x40084000: [0;33mr_ea_finetimer_isr[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40082000: [0;33mefuse_ll_get_chip_wafer_version_minor[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/hal/esp32/include/hal/efuse_ll.h[0m[0m:[1;31m115[0m
+[0m--- (inlined by) [0;33mefuse_hal_get_minor_chip_version[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/hal/esp32/efuse_hal.c[0m[0m:[1;31m49[0m
+[0m--- 0x40084000: [0;33mr_ea_finetimer_isr[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40080000: [0;33m_WindowOverflow4[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2019[0m
+[0m--- 0x40084000: [0;33mr_ea_finetimer_isr[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40086000: [0;33mr_ld_fm_sket_isr[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40084000: [0;33mr_ea_finetimer_isr[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40086000: [0;33mr_ld_fm_sket_isr[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40080000: [0;33m_WindowOverflow4[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2019[0m
+[0m--- 0x40086000: [0;33mr_ld_fm_sket_isr[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40088000: [0;33mr_vhci_isr[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40086000: [0;33mr_ld_fm_sket_isr[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40088000: [0;33mr_vhci_isr[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x40080000: [0;33m_WindowOverflow4[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2019[0m
+[0m--- 0x40088000: [0;33mr_vhci_isr[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4008a000: [0;33mset_most_pwr_reg[0m[0m at [0;32m/home/lxf/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7.c[0m[0m:[1;31m4309[0m
+[0m--- 0x40088000: [0;33mr_vhci_isr[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x4008a000: [0;33mset_most_pwr_reg[0m[0m at [0;32m/home/lxf/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7.c[0m[0m:[1;31m4309[0m
+[0m--- 0x40080000: [0;33m_WindowOverflow4[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2019[0m
+[0m--- 0x4008a000: [0;33mset_most_pwr_reg[0m[0m at [0;32m/home/lxf/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7.c[0m[0m:[1;31m4309[0m
+[0m--- 0x4008c000: [0;33mspi_flash_ll_set_read_mode[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_hal_mspi/esp32/include/hal/spi_flash_ll.h[0m[0m:[1;31m258[0m
+[0m--- 0x4008a000: [0;33mset_most_pwr_reg[0m[0m at [0;32m/home/lxf/gittree/chip7.1_phy/chip_7.1/board_code/app_test/pp/phy/phy_chip_v7.c[0m[0m:[1;31m4309[0m
+[0m--- 0x4008c000: [0;33mspi_flash_ll_set_read_mode[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_hal_mspi/esp32/include/hal/spi_flash_ll.h[0m[0m:[1;31m258[0m
+[0m--- 0x40080000: [0;33m_WindowOverflow4[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2019[0m
+[0m--- 0x4008c000: [0;33mspi_flash_ll_set_read_mode[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_hal_mspi/esp32/include/hal/spi_flash_ll.h[0m[0m:[1;31m258[0m
+[0m--- 0x4008e000: [0;33mcalloc[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_libc/src/heap.c[0m[0m:[1;31m48[0m
+[0m--- 0x4008c000: [0;33mspi_flash_ll_set_read_mode[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_hal_mspi/esp32/include/hal/spi_flash_ll.h[0m[0m:[1;31m258[0m
+[0m--- 0x4008e000: [0;33mcalloc[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_libc/src/heap.c[0m[0m:[1;31m48[0m
+[0m--- 0x40080000: [0;33m_WindowOverflow4[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2019[0m
+[0m--- 0x4008e000: [0;33mcalloc[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_libc/src/heap.c[0m[0m:[1;31m48[0m
+[0m--- 0x40090000: [0;33mxTaskIncrementTick[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m3289[0m
+[0m--- 0x4008e000: [0;33mcalloc[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_libc/src/heap.c[0m[0m:[1;31m48[0m
+[0m--- 0x40090000: [0;33mxTaskIncrementTick[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m3289[0m
+[0m--- 0x40080000: [0;33m_WindowOverflow4[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2019[0m
+[0m--- 0x40090000: [0;33mxTaskIncrementTick[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m3289[0m
+[0m--- 0x40092000: [0;33mremove_free_block[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m390[0m
+[0m--- (inlined by) [0;33mblock_remove[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m422[0m
+[0m--- (inlined by) [0;33mblock_merge_next[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m538[0m
+[0m--- (inlined by) [0;33mblock_trim_used[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m568[0m
+[0m--- (inlined by) [0;33mtlsf_realloc[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m707[0m
+[0m--- 0x40090000: [0;33mxTaskIncrementTick[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c[0m[0m:[1;31m3289[0m
+[0m--- 0x40092000: [0;33mremove_free_block[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m390[0m
+[0m--- (inlined by) [0;33mblock_remove[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m422[0m
+[0m--- (inlined by) [0;33mblock_merge_next[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m538[0m
+[0m--- (inlined by) [0;33mblock_trim_used[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m568[0m
+[0m--- (inlined by) [0;33mtlsf_realloc[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m707[0m
+[0m--- 0x40080000: [0;33m_WindowOverflow4[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2019[0m
+[0m--- 0x40092000: [0;33mremove_free_block[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m390[0m
+[0m--- (inlined by) [0;33mblock_remove[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m422[0m
+[0m--- (inlined by) [0;33mblock_merge_next[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m538[0m
+[0m--- (inlined by) [0;33mblock_trim_used[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m568[0m
+[0m--- (inlined by) [0;33mtlsf_realloc[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m707[0m
+[0m--- 0x40094000: [0;33mspi_flash_chip_generic_write[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/spi_flash/spi_flash_chip_generic.c[0m[0m:[1;31m338[0m
+[0m--- 0x40092000: [0;33mremove_free_block[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m390[0m
+[0m--- (inlined by) [0;33mblock_remove[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m422[0m
+[0m--- (inlined by) [0;33mblock_merge_next[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m538[0m
+[0m--- (inlined by) [0;33mblock_trim_used[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/tlsf/tlsf_control_functions.h[0m[0m:[1;31m568[0m
+[0m--- (inlined by) [0;33mtlsf_realloc[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/heap/tlsf/tlsf.c[0m[0m:[1;31m707[0m
+[0m--- 0x40094000: [0;33mspi_flash_chip_generic_write[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/spi_flash/spi_flash_chip_generic.c[0m[0m:[1;31m338[0m
+[0m--- 0x40080000: [0;33m_WindowOverflow4[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2019[0m
+[0m--- 0x40094000: [0;33mspi_flash_chip_generic_write[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/spi_flash/spi_flash_chip_generic.c[0m[0m:[1;31m338[0m
+[0m--- 0x40094000: [0;33mspi_flash_chip_generic_write[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/spi_flash/spi_flash_chip_generic.c[0m[0m:[1;31m338[0m
+[0m--- 0x40080000: [0;33m_WindowOverflow4[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2019[0m
+[0m--- 0x400d5e30: [0;33m__esp_system_init_fn_esp_timer_init_nonos[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_timer/src/esp_timer_init.c[0m[0m:[1;31m28[0m
+[0m--- 0x400d5774: [0;33m__esp_system_init_fn_init_libc[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_libc/src/init.c[0m[0m:[1;31m12[0m
+[0m--- 0x400d2928: [0;33m__esp_system_init_fn_init_brownout[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_system/startup_funcs.c[0m[0m:[1;31m68[0m
+[0m--- 0x400d2938: [0;33m__esp_system_init_fn_init_newlib_time[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_system/startup_funcs.c[0m[0m:[1;31m93[0m
+[0m--- 0x400d71e8: [0;33m__esp_system_init_fn_init_vfs_uart[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_driver_uart/src/uart_vfs.c[0m[0m:[1;31m1153[0m
+[0m--- 0x400ddf68: [0;33m__esp_system_init_fn_init_vfs_nullfs[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/vfs/nullfs.c[0m[0m:[1;31m322[0m
+[0m--- 0x400d1c5c: [0;33m__esp_system_init_fn_init_vfs_console[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_stdio/stdio_vfs.c[0m[0m:[1;31m264[0m
+[0m--- 0x400d5780: [0;33m__esp_system_init_fn_init_libc_stdio[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_libc/src/init.c[0m[0m:[1;31m18[0m
+[0m--- 0x400d236c: [0;33m__esp_system_init_fn_init_flash[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/spi_flash/esp_flash_spi_init.c[0m[0m:[1;31m658[0m
+[0m--- 0x400d1e68: [0;33m__esp_system_init_fn_init_efuse[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/efuse/src/esp_efuse_startup.c[0m[0m:[1;31m158[0m
+[0m--- 0x40117e38: [0;33m__esp_system_init_fn_esp_timer_init_os[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_timer/src/esp_timer.c[0m[0m:[1;31m568[0m
+[0m--- 0x401228d0: [0;33m__esp_system_init_fn_esp_security_init[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_security/src/init.c[0m[0m:[1;31m57[0m
+[0m--- 0x40118628: [0;33m__esp_system_init_fn_mbedtls_psa_crypto_init_fn[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/mbedtls/port/esp_psa_crypto_init.c[0m[0m:[1;31m23[0m
+[0m--- 0x400d2944: [0;33m__esp_system_init_fn_init_disable_rtc_wdt[0m[0m at [0;32mC:/esp/v6.0.1/esp-idf/components/esp_system/startup_funcs.c[0m[0m:[1;31m139[0m
+[0m
