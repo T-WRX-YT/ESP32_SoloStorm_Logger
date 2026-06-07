@@ -289,24 +289,12 @@ static void esp_spp_cb(esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
                 const char *reply = "OK\r\r>";
                 esp_spp_write(param->data_ind.handle, strlen(reply), (uint8_t *)reply);
 			}
-			else if (strcmp(buf, "ATSP00") == 0) {
-				ESP_LOGW(SPP_TAG, "OBD2 mode detected, sending OK");
-				protocolMode = 2;
-                const char *reply = "OK\r\r>";
-                esp_spp_write(param->data_ind.handle, strlen(reply), (uint8_t *)reply);
-			}
 			else if (strcmp(buf, "ATIGN") == 0) {
 				ESP_LOGE(SPP_TAG, "ATIGN received.  Not sending a response.");
 				//sendData = 0;
 				//protocolMode = 0;
                 //const char *reply = "WAKE\r\r>";
                 //esp_spp_write(param->data_ind.handle, strlen(reply), (uint8_t *)reply);
-			}
-			else if ((strcmp(buf, "ATDP") == 0) && (protocolMode == 2)) {
-				ESP_LOGE(SPP_TAG, "hit ATDP and protocolMode = 2, should start replying to obd requests.  Sending OK");
-				sendData = 1;
-                const char *reply = "OK\r\r>";
-                esp_spp_write(param->data_ind.handle, strlen(reply), (uint8_t *)reply);
 			}			
             else {
                 ESP_LOGW(SPP_TAG, "Unparsed Message received, sending OK");
@@ -431,11 +419,22 @@ void uart_event_task(void *pvParameters)
 						ESP_LOGI(SPP_TAG, "COOL:%d IAT:%d RPM:%d GEAR:%d SPD:%d THR:%d OILT:%d OILP:%d DIFFT:%d DCCD:%d BRK:%d FB:%.2f FN:%.2f BST:%.2f DAM:%.2f AFR:%.2f",
 							coolant, intakeTemp, rpm, gear, speed, throttle, oilTemp, oilPress, diffTemp, dccd, brake, fbKnock, fineKnock, boost, dam, afr);
 
-						if (isConnected && sendData && protocolMode == 1) {
+						// send the solostorm canbus frame
+                        if (isConnected && sendData && protocolMode == 1) {
 							char bt_buf[64];
-							int len = snprintf(bt_buf, sizeof(bt_buf),
-								"%03X%04X%02X%02X\r",
-								0x123, rpm, speed, throttle);
+							
+                            /*
+                            rpm = 1337;
+                            speed = 123;
+                            throttle = 69;
+                            brake = 0;
+                            dccd = 69;
+                            */
+                            
+                            
+                            int len = snprintf(bt_buf, sizeof(bt_buf),
+								"%03X%04X%02X%02X%02X%02X\r",
+								0x123, rpm, speed, throttle, brake, dccd);
 
 							esp_spp_write(spp_client_handle, len, (uint8_t *)bt_buf);
 							ESP_LOGI(SPP_TAG, "BT message sent: %s", bt_buf);

@@ -1,0 +1,673 @@
+ Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+coets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun  6 2026 09:42:54[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=12ed4h ( 77524) map[0m
+[0;32mI (116) esp_image: segment 1: paddr=00022efc vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (117) esp_image: segment 2: paddr=00022f20 vaddr=3ffbdb60 size=04548h ( 17736) load[0m
+[0;32mI (127) esp_image: segment 3: paddr=00027470 vaddr=40080000 size=08ba8h ( 35752) load[0m
+[0;32mI (142) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=64264h (410212) map[0m
+[0;32mI (282) esp_image: segment 5: paddr=0009428c vaddr=40088ba8 size=0e85ch ( 59484) load[0m
+[0;32mI (317) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (317) boot: Disabling RNG early entropy source...[0m
+V (327) mmap: after coalescing, 3 regions are left
+[0;32mI (327) cpu_start: Multicore app[0m
+D (328) cpu_start: Pro cpu up
+D (328) cpu_start: Starting app cpu, entry point is 0x40081390
+D (0) cpu_start: App cpu up
+D (341) clk: RTC_SLOW_CLK calibration value: 3327859
+D (352) cpu_start: calling init function: 0x400d19d4 on core: 0
+D (352) cpu_start: calling init function: 0x400d1ebc on core: 0
+[0;32mI (354) cpu_start: Pro cpu start user code[0m
+[0;32mI (358) cpu_start: cpu freq: 160000000 Hz[0m
+D (361) cpu_start: calling init function: 0x400d1914 on core: 0
+[0;32mI (367) app_init: Application information:[0m
+[0;32mI (371) app_init: Project name:     bt_spp_acceptor_demo[0m
+[0;32mI (376) app_init: App version:      bacbd15-dirty[0m
+[0;32mI (380) app_init: Compile time:     Jun  6 2026 09:42:16[0m
+[0;32mI (385) app_init: ELF file SHA256:  1c8158f79...[0m
+[0;32mI (390) app_init: ESP-IDF:          v5.4.1[0m
+D (393) cpu_start: calling init function: 0x400d19e8 on core: 0
+[0;32mI (399) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (403) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (407) efuse_init: Chip rev:         v3.1[0m
+D (411) cpu_start: calling init function: 0x400d3c78 on core: 0
+V (417) memory_layout: reserved range is 0x3f412dfc - 0x3f412e64
+D (422) memory_layout: Checking 13 reserved memory ranges:
+D (427) memory_layout: Reserved memory range 0x3ff82000 - 0x3ff82000
+D (433) memory_layout: Reserved memory range 0x3ffae000 - 0x3ffae6e0
+D (439) memory_layout: Reserved memory range 0x3ffae6e0 - 0x3ffaff10
+D (446) memory_layout: Reserved memory range 0x3ffb0000 - 0x3ffb6388
+D (452) memory_layout: Reserved memory range 0x3ffb8000 - 0x3ffb9a20
+D (458) memory_layout: Reserved memory range 0x3ffbdb28 - 0x3ffbdb5c
+D (464) memory_layout: Reserved memory range 0x3ffbdb60 - 0x3ffc7f78
+D (470) memory_layout: Reserved memory range 0x3ffe0000 - 0x3ffe0440
+D (476) memory_layout: Reserved memory range 0x3ffe3f20 - 0x3ffe4350
+D (482) memory_layout: Reserved memory range 0x40070000 - 0x40078000
+D (488) memory_layout: Reserved memory range 0x40078000 - 0x40080000
+D (494) memory_layout: Reserved memory range 0x40080000 - 0x40097404
+D (500) memory_layout: Reserved memory range 0x50001fe8 - 0x50002000
+D (506) memory_layout: Building list of available memory regions:
+V (512) memory_layout: Examining memory region 0x3ffae000 - 0x3ffb0000
+V (518) memory_layout: Start of region 0x3ffae000 - 0x3ffb0000 overlaps reserved 0x3ffae000 - 0x3ffae6e0
+V (528) memory_layout: Start of region 0x3ffae6e0 - 0x3ffb0000 overlaps reserved 0x3ffae6e0 - 0x3ffaff10
+D (537) memory_layout: Available memory region 0x3ffaff10 - 0x3ffb0000
+V (543) memory_layout: Examining memory region 0x3ffb0000 - 0x3ffb8000
+V (549) memory_layout: Start of region 0x3ffb0000 - 0x3ffb8000 overlaps reserved 0x3ffb0000 - 0x3ffb6388
+D (559) memory_layout: Available memory region 0x3ffb6388 - 0x3ffb8000
+V (565) memory_layout: Examining memory region 0x3ffb8000 - 0x3ffc0000
+V (571) memory_layout: Start of region 0x3ffb8000 - 0x3ffc0000 overlaps reserved 0x3ffb8000 - 0x3ffb9a20
+V (580) memory_layout: Region 0x3ffb9a20 - 0x3ffc0000 contains reserved 0x3ffbdb28 - 0x3ffbdb5c
+D (589) memory_layout: Available memory region 0x3ffb9a20 - 0x3ffbdb28
+V (595) memory_layout: Examining memory region 0x3ffbdb5c - 0x3ffc0000
+V (601) memory_layout: End of region 0x3ffbdb5c - 0x3ffc0000 overlaps reserved 0x3ffbdb60 - 0x3ffc7f78
+V (610) memory_layout: Examining memory region 0x3ffc0000 - 0x3ffc2000
+V (616) memory_layout: Region 0x3ffc0000 - 0x3ffc2000 inside of reserved 0x3ffbdb60 - 0x3ffc7f78
+V (625) memory_layout: Examining memory region 0x3ffc2000 - 0x3ffc4000
+V (631) memory_layout: Region 0x3ffc2000 - 0x3ffc4000 inside of reserved 0x3ffbdb60 - 0x3ffc7f78
+V (640) memory_layout: Examining memory region 0x3ffc4000 - 0x3ffc6000
+V (646) memory_layout: Region 0x3ffc4000 - 0x3ffc6000 inside of reserved 0x3ffbdb60 - 0x3ffc7f78
+V (654) memory_layout: Examining memory region 0x3ffc6000 - 0x3ffc8000
+V (661) memory_layout: Start of region 0x3ffc6000 - 0x3ffc8000 overlaps reserved 0x3ffbdb60 - 0x3ffc7f78
+D (670) memory_layout: Available memory region 0x3ffc7f78 - 0x3ffc8000
+V (676) memory_layout: Examining memory region 0x3ffc8000 - 0x3ffca000
+D (682) memory_layout: Available memory region 0x3ffc8000 - 0x3ffca000
+V (689) memory_layout: Examining memory region 0x3ffca000 - 0x3ffcc000
+D (695) memory_layout: Available memory region 0x3ffca000 - 0x3ffcc000
+V (701) memory_layout: Examining memory region 0x3ffcc000 - 0x3ffce000
+D (707) memory_layout: Available memory region 0x3ffcc000 - 0x3ffce000
+V (714) memory_layout: Examining memory region 0x3ffce000 - 0x3ffd0000
+D (720) memory_layout: Available memory region 0x3ffce000 - 0x3ffd0000
+V (726) memory_layout: Examining memory region 0x3ffd0000 - 0x3ffd2000
+D (732) memory_layout: Available memory region 0x3ffd0000 - 0x3ffd2000
+V (739) memory_layout: Examining memory region 0x3ffd2000 - 0x3ffd4000
+D (745) memory_layout: Available memory region 0x3ffd2000 - 0x3ffd4000
+V (751) memory_layout: Examining memory region 0x3ffd4000 - 0x3ffd6000
+D (757) memory_layout: Available memory region 0x3ffd4000 - 0x3ffd6000
+V (764) memory_layout: Examining memory region 0x3ffd6000 - 0x3ffd8000
+D (770) memory_layout: Available memory region 0x3ffd6000 - 0x3ffd8000
+V (776) memory_layout: Examining memory region 0x3ffd8000 - 0x3ffda000
+D (782) memory_layout: Available memory region 0x3ffd8000 - 0x3ffda000
+V (789) memory_layout: Examining memory region 0x3ffda000 - 0x3ffdc000
+D (795) memory_layout: Available memory region 0x3ffda000 - 0x3ffdc000
+V (801) memory_layout: Examining memory region 0x3ffdc000 - 0x3ffde000
+D (807) memory_layout: Available memory region 0x3ffdc000 - 0x3ffde000
+V (814) memory_layout: Examining memory region 0x3ffde000 - 0x3ffe0000
+D (820) memory_layout: Available memory region 0x3ffde000 - 0x3ffe0000
+V (826) memory_layout: Examining memory region 0x3ffe0000 - 0x3ffe4000
+V (832) memory_layout: Start of region 0x3ffe0000 - 0x3ffe4000 overlaps reserved 0x3ffe0000 - 0x3ffe0440
+V (842) memory_layout: End of region 0x3ffe0440 - 0x3ffe4000 overlaps reserved 0x3ffe3f20 - 0x3ffe4350
+D (851) memory_layout: Available memory region 0x3ffe0440 - 0x3ffe3f20
+V (857) memory_layout: Examining memory region 0x3ffe4000 - 0x3ffe8000
+V (863) memory_layout: Start of region 0x3ffe4000 - 0x3ffe8000 overlaps reserved 0x3ffe3f20 - 0x3ffe4350
+D (872) memory_layout: Available memory region 0x3ffe4350 - 0x3ffe8000
+V (879) memory_layout: Examining memory region 0x3ffe8000 - 0x3fff0000
+D (885) memory_layout: Available memory region 0x3ffe8000 - 0x3fff0000
+V (891) memory_layout: Examining memory region 0x3fff0000 - 0x3fff8000
+D (897) memory_layout: Available memory region 0x3fff0000 - 0x3fff8000
+V (904) memory_layout: Examining memory region 0x3fff8000 - 0x3fffc000
+D (910) memory_layout: Available memory region 0x3fff8000 - 0x3fffc000
+V (916) memory_layout: Examining memory region 0x3fffc000 - 0x40000000
+D (922) memory_layout: Available memory region 0x3fffc000 - 0x40000000
+V (929) memory_layout: Examining memory region 0x40070000 - 0x40078000
+V (935) memory_layout: Region 0x40070000 - 0x40078000 inside of reserved 0x40070000 - 0x40078000
+V (943) memory_layout: Examining memory region 0x40078000 - 0x40080000
+V (950) memory_layout: Region 0x40078000 - 0x40080000 inside of reserved 0x40078000 - 0x40080000
+V (958) memory_layout: Examining memory region 0x40080000 - 0x40082000
+V (964) memory_layout: Region 0x40080000 - 0x40082000 inside of reserved 0x40080000 - 0x40097404
+V (973) memory_layout: Examining memory region 0x40082000 - 0x40084000
+V (979) memory_layout: Region 0x40082000 - 0x40084000 inside of reserved 0x40080000 - 0x40097404
+V (988) memory_layout: Examining memory region 0x40084000 - 0x40086000
+V (994) memory_layout: Region 0x40084000 - 0x40086000 inside of reserved 0x40080000 - 0x40097404
+V (1002) memory_layout: Examining memory region 0x40086000 - 0x40088000
+V (1009) memory_layout: Region 0x40086000 - 0x40088000 inside of reserved 0x40080000 - 0x40097404
+V (1017) memory_layout: Examining memory region 0x40088000 - 0x4008a000
+V (1024) memory_layout: Region 0x40088000 - 0x4008a000 inside of reserved 0x40080000 - 0x40097404
+V (1032) memory_layout: Examining memory region 0x4008a000 - 0x4008c000
+V (1039) memory_layout: Region 0x4008a000 - 0x4008c000 inside of reserved 0x40080000 - 0x40097404
+V (1047) memory_layout: Examining memory region 0x4008c000 - 0x4008e000
+V (1053) memory_layout: Region 0x4008c000 - 0x4008e000 inside of reserved 0x40080000 - 0x40097404
+V (1062) memory_layout: Examining memory region 0x4008e000 - 0x40090000
+V (1068) memory_layout: Region 0x4008e000 - 0x40090000 inside of reserved 0x40080000 - 0x40097404
+V (1077) memory_layout: Examining memory region 0x40090000 - 0x40092000
+V (1083) memory_layout: Region 0x40090000 - 0x40092000 inside of reserved 0x40080000 - 0x40097404
+V (1092) memory_layout: Examining memory region 0x40092000 - 0x40094000
+V (1098) memory_layout: Region 0x40092000 - 0x40094000 inside of reserved 0x40080000 - 0x40097404
+V (1107) memory_layout: Examining memory region 0x40094000 - 0x40096000
+V (1113) memory_layout: Region 0x40094000 - 0x40096000 inside of reserved 0x40080000 - 0x40097404
+V (1122) memory_layout: Examining memory region 0x40096000 - 0x40098000
+V (1128) memory_layout: Start of region 0x40096000 - 0x40098000 overlaps reserved 0x40080000 - 0x40097404
+D (1137) memory_layout: Available memory region 0x40097404 - 0x40098000
+V (1144) memory_layout: Examining memory region 0x40098000 - 0x4009a000
+D (1150) memory_layout: Available memory region 0x40098000 - 0x4009a000
+V (1156) memory_layout: Examining memory region 0x4009a000 - 0x4009c000
+D (1163) memory_layout: Available memory region 0x4009a000 - 0x4009c000
+V (1169) memory_layout: Examining memory region 0x4009c000 - 0x4009e000
+D (1175) memory_layout: Available memory region 0x4009c000 - 0x4009e000
+V (1182) memory_layout: Examining memory region 0x4009e000 - 0x400a0000
+D (1188) memory_layout: Available memory region 0x4009e000 - 0x400a0000
+[0;32mI (1194) heap_init: Initializing. RAM available for dynamic allocation:[0m
+D (1201) heap_init: New heap initialised at 0x3ffaff10
+[0;32mI (1206) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+D (1211) heap_init: New heap initialised at 0x3ffb6388
+[0;32mI (1216) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+D (1221) heap_init: New heap initialised at 0x3ffb9a20
+[0;32mI (1226) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+D (1231) heap_init: New heap initialised at 0x3ffc7f78
+[0;32mI (1236) heap_init: At 3FFC7F78 len 00018088 (96 KiB): DRAM[0m
+[0;32mI (1241) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (1247) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+D (1252) heap_init: New heap initialised at 0x40097404
+[0;32mI (1257) heap_init: At 40097404 len 00008BFC (34 KiB): IRAM[0m
+D (1262) cpu_start: calling init function: 0x400d5650 on core: 0
+D (1268) cpu_start: calling init function: 0x400d5160 on core: 0
+D (1274) cpu_start: calling init function: 0x400d1f00 on core: 0
+V (1280) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args
+V (1286) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0x40E
+D (1294) intr_alloc: Connected src 46 to int 1 (cpu 0)
+D (1298) cpu_start: calling init function: 0x400d1f0c on core: 0
+D (1304) cpu_start: calling init function: 0x400d6920 on core: 0
+D (1310) cpu_start: calling init function: 0x400d9fd4 on core: 0
+D (1316) cpu_start: calling init function: 0x400d8c44 on core: 0
+D (1321) cpu_start: calling init function: 0x400d51cc on core: 0
+D (1328) cpu_start: calling init function: 0x400d1f18 on core: 0
+V (1333) memspi: raw_chip_id: 164068
+
+V (1336) memspi: chip_id: 684016
+
+V (1339) memspi: raw_chip_id: 164068
+
+V (1343) memspi: chip_id: 684016
+
+D (1346) spi_flash: trying chip: issi
+D (1349) spi_flash: trying chip: gd
+D (1353) spi_flash: trying chip: mxic
+D (1356) spi_flash: trying chip: winbond
+D (1360) spi_flash: trying chip: generic
+[0;32mI (1363) spi_flash: detected chip: generic[0m
+[0;32mI (1367) spi_flash: flash io: dio[0m
+[0;33mW (1370) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+D (1382) cpu_start: calling init function: 0x400d1a74 on core: 0
+D (1388) cpu_start: calling init function: 0x40116240
+D (1393) cpu_start: calling init function: 0x40115958
+D (1398) cpu_start: calling init function: 0x40114ba4
+D (1403) cpu_start: calling init function: 0x4008db88
+D (1407) cpu_start: calling init function: 0x400d2f78
+D (1412) cpu_start: calling init function: 0x400d24e0
+D (1417) cpu_start: calling init function: 0x40111e14 on core: 0
+V (1423) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args
+V (1429) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0xC02
+D (1437) intr_alloc: Connected src 17 to int 2 (cpu 0)
+D (1441) cpu_start: calling init function: 0x4012fc2c on core: 0
+D (1447) cpu_start: calling init function: 0x400d1f3c on core: 0
+V (1453) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args
+V (1459) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0x40E
+D (1467) intr_alloc: Connected src 24 to int 3 (cpu 0)
+D (1472) app_start: Starting scheduler on CPU0
+V (1476) intr_alloc: esp_intr_alloc_intrstatus (cpu 1): checking args
+V (1476) intr_alloc: esp_intr_alloc_intrstatus (cpu 1): Args okay. Resulting flags 0x40E
+I (D (1486) intr_alloc: Connected src 25 to int 1 (cpu 1)
+D (1486) app_start: Starting scheduler on CPU1
+1476) main_task: Started on CPU0
+D (1506) heap_init: New heap initialised at 0x3ffe0440
+D (1506) heap_init: New heap initialised at 0x3ffe4350
+V (1506) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args
+V (1516) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0xE
+D (1516) intr_alloc: Connected src 16 to int 5 (cpu 0)
+[0;32mI (1526) main_task: Calling app_main()[0m
+V (1526) partition: Loading the partition table
+V (1536) mmap: actual_mapped_len is 0x10000
+V (1536) calculated md5: 0x3ffbb9f8   f4 ad 4f 45 38 56 4b 5d  74 35 b6 2c 75 b6 95 24  |..OE8VK]t5.,u..$|
+V (1546) stored md5: 0x3f428070   f4 ad 4f 45 38 56 4b 5d  74 35 b6 2c 75 b6 95 24  |..OE8VK]t5.,u..$|
+V (1556) partition: Partition table MD5 verified
+D (1566) BTDM_INIT: Release DRAM [0x3ffb09a8] - [0x3ffb1ddc]
+V (1566) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args
+V (1576) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0x40E
+D (1576) intr_alloc: Connected src -5 to int 29 (cpu 0)
+[0;32mI (1586) BTDM_INIT: BT controller compile version [dc1cd58][0m
+D (1586) BTDM_INIT: .data initialise [0x3ffae6e0] <== [0x4000d890]
+D (1596) BTDM_INIT: .bss initialise [0x3ffb0000] - [0x3ffb09a8]
+D (1606) BTDM_INIT: .bss initialise [0x3ffb1ddc] - [0x3ffb2730]
+D (1606) BTDM_INIT: .bss initialise [0x3ffb2730] - [0x3ffb6388]
+D (1616) BTDM_INIT: .bss initialise [0x3ffb8000] - [0x3ffb9a20]
+D (1616) BTDM_INIT: .bss initialise [0x3ffbdb28] - [0x3ffbdb5c]
+D (1626) efuse: BLK0 REG2 [8-15], len=8 bits
+D (1626) efuse: BLK0 REG2 [0-7], len=8 bits
+D (1636) efuse: BLK0 REG1 [24-31], len=8 bits
+D (1636) efuse: BLK0 REG1 [16-23], len=8 bits
+D (1636) efuse: BLK0 REG1 [8-15], len=8 bits
+D (1646) efuse: BLK0 REG1 [0-7], len=8 bits
+D (1646) efuse: BLK0 REG2 [16-23], len=8 bits
+[0;32mI (1656) BTDM_INIT: Bluetooth MAC: ac:15:18:d5:9f:46[0m
+[0;32mI (1656) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+D (1666) phy_init: loading PHY init data from application binary
+D (1666) nvs: nvs_open_from_partition phy 0
+D (1676) nvs: nvs_get cal_version 4
+V (1676) phy_init: phy_get_rf_cal_version: 4860
+D (1676) nvs: nvs_get_str_or_blob cal_mac
+D (1686) efuse: BLK0 REG2 [8-15], len=8 bits
+D (1686) efuse: BLK0 REG2 [0-7], len=8 bits
+D (1686) efuse: BLK0 REG1 [24-31], len=8 bits
+D (1696) efuse: BLK0 REG1 [16-23], len=8 bits
+D (1696) efuse: BLK0 REG1 [8-15], len=8 bits
+D (1706) efuse: BLK0 REG1 [0-7], len=8 bits
+D (1706) efuse: BLK0 REG2 [16-23], len=8 bits
+D (1706) nvs: nvs_get_str_or_blob cal_data
+D (1716) nvs: nvs_close 1
+D (1716) efuse: BLK0 REG2 [8-15], len=8 bits
+D (1726) efuse: BLK0 REG2 [0-7], len=8 bits
+D (1726) efuse: BLK0 REG1 [24-31], len=8 bits
+D (1726) efuse: BLK0 REG1 [16-23], len=8 bits
+D (1736) efuse: BLK0 REG1 [8-15], len=8 bits
+D (1736) efuse: BLK0 REG1 [0-7], len=8 bits
+D (1746) efuse: BLK0 REG2 [16-23], len=8 bits
+Coex register Wi-Fi channel change btdm cb faild
+D (2286) nvs: nvs_open_from_partition bt_config.conf 1
+D (2286) nvs: nvs_get_str_or_blob bt_cfg_key0
+D (2286) nvs: nvs_get_str_or_blob bt_cfg_key0
+D (2296) nvs: nvs_close 2
+D (2296) nvs: nvs_open_from_partition bt_config.conf 1
+D (2296) nvs: nvs_set_blob bt_cfg_key0 546
+D (2306) nvs: nvs_close 3
+[1;31mE (2326) OBDLINK_EMULATOR: Enabled bluedroid[0m
+[1;31mE (2326) OBDLINK_EMULATOR: Sniff mode disabled via BTM_SetDefaultLinkPolicy[0m
+[0;32mI (2326) OBDLINK_EMULATOR: ESP_SPP_INIT_EVT[0m
+[0;32mI (2336) OBDLINK_EMULATOR: ESP_SPP_START_EVT handle:129 sec_id:55 scn:1[0m
+[0;32mI (2346) OBDLINK_EMULATOR: event: 10[0m
+[0;32mI (2346) OBDLINK_EMULATOR: Own address:[ac:15:18:d5:9f:46][0m
+[0;32mI (2346) uart: queue free spaces: 20[0m
+V (2346) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): checking args
+V (2356) intr_alloc: esp_intr_alloc_intrstatus (cpu 0): Args okay. Resulting flags 0xE
+D (2366) intr_alloc: Connected src 36 to int 9 (cpu 0)
+[0;32mI (2366) main_task: Returned from app_main()[0m
+[0;32mI (5936) OBDLINK_EMULATOR: Line: '38,38,5297,1,112,75,38,62,38,68,1,-1.40,0.00,15.45,1.00,12.10'[0m
+[0;32mI (5936) OBDLINK_EMULATOR: COOL:38 IAT:38 RPM:5297 GEAR:1 SPD:112 THR:75 OILT:38 OILP:62 DIFFT:38 DCCD:68 BRK:1 FB:-1.40 FN:0.00 BST:15.45 DAM:1.00 AFR:12.10[0m
+[0;32mI (15936) OBDLINK_EMULATOR: Line: '39,39,4458,3,146,36,39,31,39,32,0,0.00,-1.40,0.00,1.00,19.80'[0m
+[0;32mI (15936) OBDLINK_EMULATOR: COOL:39 IAT:39 RPM:4458 GEAR:3 SPD:146 THR:36 OILT:39 OILP:31 DIFFT:39 DCCD:32 BRK:0 FB:0.00 FN:-1.40 BST:0.00 DAM:1.00 AFR:19.80[0m
+[0;32mI (25936) OBDLINK_EMULATOR: Line: '40,40,2488,1,37,21,40,94,40,86,1,0.00,0.00,-17.27,1.00,19.80'[0m
+[0;32mI (25936) OBDLINK_EMULATOR: COOL:40 IAT:40 RPM:2488 GEAR:1 SPD:37 THR:21 OILT:40 OILP:94 DIFFT:40 DCCD:86 BRK:1 FB:0.00 FN:0.00 BST:-17.27 DAM:1.00 AFR:19.80[0m
+[0;32mI (35936) OBDLINK_EMULATOR: Line: '41,41,1949,4,46,94,41,62,41,72,0,0.00,-1.40,-13.64,1.00,16.50'[0m
+[0;32mI (35936) OBDLINK_EMULATOR: COOL:41 IAT:41 RPM:1949 GEAR:4 SPD:46 THR:94 OILT:41 OILP:62 DIFFT:41 DCCD:72 BRK:0 FB:0.00 FN:-1.40 BST:-13.64 DAM:1.00 AFR:16.50[0m
+���������������������������������������������������������������� (45936) OBDLINK_EMULATOR: Line: '42,42,2793,4,16,68,42,63,42,53,0,0.00,0.00,14.55,1.00,16.50'
+[0;32mI (45936) OBDLINK_EMULATOR: COOL:42 IAT:42 RPM:2793 GEAR:4 SPD:16 THR:68 OILT:42 OILP:63 DIFFT:42 DCCD:53 BRK:0 FB:0.00 FN:0.00 BST:14.55 DAM:1.00 AFR:16.50[0m
+[0;32mI (55936) OBDLINK_EMULATOR: Line: '43,43,995,2,105,29,43,33,43,9,1,-2.80,-1.40,-14.55,1.00,15.40'[0m
+[0;32mI (55946) OBDLINK_EMULATOR: COOL:43 IAT:43 RPM:995 GEAR:2 SPD:105 THR:29 OILT:43 OILP:33 DIFFT:43 DCCD:9 BRK:1 FB:-2.80 FN:-1.40 BST:-14.55 DAM:1.00 AFR:15.40[0m
+[0;32mI (65946) OBDLINK_EMULATOR: Line: '44,44,6565,3,64,19,44,11,44,80,1,-2.80,-1.40,-3.64,1.00,23.10'[0m
+[0;32mI (65946) OBDLINK_EMULATOR: COOL:44 IAT:44 RPM:6565 GEAR:3 SPD:64 THR:19 OILT:44 OILP:11 DIFFT:44 DCCD:80 BRK:1 FB:-2.80 FN:-1.40 BST:-3.64 DAM:1.00 AFR:23.10[0m
+[0;32mI (75946) OBDLINK_EMULATOR: Line: '45,45,5233,1,146,79,45,60,45,27,0,0.00,-1.40,-3.64,1.00,17.60'[0m
+[0;32mI (75946) OBDLINK_EMULATOR: COOL:45 IAT:45 RPM:5233 GEAR:1 SPD:146 THR:79 OILT:45 OILP:60 DIFFT:45 DCCD:27 BRK:0 FB:0.00 FN:-1.40 BST:-3.64 DAM:1.00 AFR:17.60[0m
+[0;32mI (85946) OBDLINK_EMULATOR: Line: '46,46,5819,3,17,48,46,26,46,80,0,0.00,-1.40,0.91,1.00,16.50'[0m
+[0;32mI (85946) OBDLINK_EMULATOR: COOL:46 IAT:46 RPM:5819 GEAR:3 SPD:17 THR:48 OILT:46 OILP:26 DIFFT:46 DCCD:80 BRK:0 FB:0.00 FN:-1.40 BST:0.91 DAM:1.00 AFR:16.50[0m
+[0;32mI (95946) OBDLINK_EMULATOR: Line: '47,47,5196,2,21,88,47,85,47,64,1,-5.60,0.00,-1.82,1.00,11.00'[0m
+[0;32mI (95946) OBDLINK_EMULATOR: COOL:47 IAT:47 RPM:5196 GEAR:2 SPD:21 THR:88 OILT:47 OILP:85 DIFFT:47 DCCD:64 BRK:1 FB:-5.60 FN:0.00 BST:-1.82 DAM:1.00 AFR:11.00[0m
+[0;32mI (105946) OBDLINK_EMULATOR: Line: '48,48,5933,2,23,41,48,94,48,68,1,-1.40,0.00,0.91,1.00,24.20'[0m
+[0;32mI (105946) OBDLINK_EMULATOR: COOL:48 IAT:48 RPM:5933 GEAR:2 SPD:23 THR:41 OILT:48 OILP:94 DIFFT:48 DCCD:68 BRK:1 FB:-1.40 FN:0.00 BST:0.91 DAM:1.00 AFR:24.20[0m
+[0;32mI (115946) OBDLINK_EMULATOR: Line: '49,49,1080,3,99,70,49,94,49,78,1,-4.20,-1.40,-6.36,1.00,24.20'[0m
+[0;32mI (115946) OBDLINK_EMULATOR: COOL:49 IAT:49 RPM:1080 GEAR:3 SPD:99 THR:70 OILT:49 OILP:94 DIFFT:49 DCCD:78 BRK:1 FB:-4.20 FN:-1.40 BST:-6.36 DAM:1.00 AFR:24.20[0m
+[0;32mI (125946) OBDLINK_EMULATOR: Line: '50,50,2949,1,149,8,50,41,50,79,0,-2.80,0.00,-3.64,1.00,16.50'[0m
+[0;32mI (125946) OBDLINK_EMULATOR: COOL:50 IAT:50 RPM:2949 GEAR:1 SPD:149 THR:8 OILT:50 OILP:41 DIFFT:50 DCCD:79 BRK:0 FB:-2.80 FN:0.00 BST:-3.64 DAM:1.00 AFR:16.50[0m
+���������������������������������������������������������������� (129746) OBDLINK_EMULATOR: event: 16
+[0;32mI (129906) OBDLINK_EMULATOR: ESP_SPP_SRV_OPEN_EVT status:0 handle:129, rem_bda:[c4:ef:3d:44:b1:48][0m
+[0;32mI (129926) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:4 handle:129[0m
+[0;32mI (129926) : 41 54 5a 0d[0m
+[0;32mI (129926) OBDLINK_EMULATOR: Received data: ATZ[0m
+[0;32mI (129926) OBDLINK_EMULATOR: Trimmed input: 'ATZ'[0m
+[0;33mW (129936) OBDLINK_EMULATOR: Handshake message, sending OK[0m
+[0;32mI (129936) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (129946) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:5 handle:129[0m
+[0;32mI (129956) : 41 54 45 30 0d[0m
+[0;32mI (129956) OBDLINK_EMULATOR: Received data: ATE0[0m
+[0;32mI (129956) OBDLINK_EMULATOR: Trimmed input: 'ATE0'[0m
+[0;33mW (129956) OBDLINK_EMULATOR: Handshake message, sending OK[0m
+[0;32mI (129966) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (129996) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:5 handle:129[0m
+[0;32mI (129996) : 41 54 53 30 0d[0m
+[0;32mI (129996) OBDLINK_EMULATOR: Received data: ATS0[0m
+[0;32mI (129996) OBDLINK_EMULATOR: Trimmed input: 'ATS0'[0m
+[0;33mW (129996) OBDLINK_EMULATOR: Handshake message, sending OK[0m
+[0;32mI (130006) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (130036) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:5 handle:129[0m
+[0;32mI (130036) : 41 54 4c 30 0d[0m
+[0;32mI (130036) OBDLINK_EMULATOR: Received data: ATL0[0m
+[0;32mI (130036) OBDLINK_EMULATOR: Trimmed input: 'ATL0'[0m
+[0;33mW (130036) OBDLINK_EMULATOR: Handshake message, sending OK[0m
+[0;32mI (130046) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (130066) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:7 handle:129[0m
+[0;32mI (130066) : 53 54 50 20 33 33 0d[0m
+[0;32mI (130066) OBDLINK_EMULATOR: Received data: STP 33[0m
+[0;32mI (130066) OBDLINK_EMULATOR: Trimmed input: 'STP 33'[0m
+[0;33mW (130076) OBDLINK_EMULATOR: Canbus mode detected, sending OK[0m
+[0;32mI (130086) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (130106) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:10 handle:129[0m
+[0;32mI (130106) : 53 54 43 53 45 47 52 20 31 0d[0m
+[0;32mI (130106) OBDLINK_EMULATOR: Received data: STCSEGR 1[0m
+[0;32mI (130116) OBDLINK_EMULATOR: Trimmed input: 'STCSEGR 1'[0m
+[0;33mW (130116) OBDLINK_EMULATOR: Unparsed Message received, sending OK[0m
+[0;33mW (130126) OBDLINK_EMULATOR: Received data: STCSEGR 1[0m
+[0;32mI (130126) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (130156) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:6 handle:129[0m
+[0;32mI (130156) : 41 54 48 20 31 0d[0m
+[0;32mI (130156) OBDLINK_EMULATOR: Received data: ATH 1[0m
+[0;32mI (130156) OBDLINK_EMULATOR: Trimmed input: 'ATH 1'[0m
+[0;33mW (130166) OBDLINK_EMULATOR: Unparsed Message received, sending OK[0m
+[0;33mW (130176) OBDLINK_EMULATOR: Received data: ATH 1[0m
+[0;32mI (130176) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (130206) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:6 handle:129[0m
+[0;32mI (130206) : 41 54 44 20 30 0d[0m
+[0;32mI (130206) OBDLINK_EMULATOR: Received data: ATD 0[0m
+[0;32mI (130206) OBDLINK_EMULATOR: Trimmed input: 'ATD 0'[0m
+[0;33mW (130216) OBDLINK_EMULATOR: Unparsed Message received, sending OK[0m
+[0;33mW (130216) OBDLINK_EMULATOR: Received data: ATD 0[0m
+[0;32mI (130226) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (130276) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:6 handle:129[0m
+[0;32mI (130276) : 41 54 50 50 53 0d[0m
+[0;32mI (130276) OBDLINK_EMULATOR: Received data: ATPPS[0m
+[0;32mI (130276) OBDLINK_EMULATOR: Trimmed input: 'ATPPS'[0m
+[0;33mW (130286) OBDLINK_EMULATOR: Unparsed Message received, sending OK[0m
+[0;33mW (130286) OBDLINK_EMULATOR: Received data: ATPPS[0m
+[0;32mI (130296) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (130366) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:6 handle:129[0m
+[0;32mI (130376) : 53 54 46 41 43 0d[0m
+[0;32mI (130376) OBDLINK_EMULATOR: Received data: STFAC[0m
+[0;32mI (130376) OBDLINK_EMULATOR: Trimmed input: 'STFAC'[0m
+[0;33mW (130376) OBDLINK_EMULATOR: Unparsed Message received, sending OK[0m
+[0;33mW (130386) OBDLINK_EMULATOR: Received data: STFAC[0m
+[0;32mI (130386) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (130426) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:14 handle:129[0m
+[0;32mI (130426) : 53 54 46 50 41 20 30 30 30 2c 30 30 30 0d[0m
+[0;32mI (130426) OBDLINK_EMULATOR: Received data: STFPA 000,000[0m
+[0;32mI (130436) OBDLINK_EMULATOR: Trimmed input: 'STFPA 000,000'[0m
+[0;33mW (130436) OBDLINK_EMULATOR: Unparsed Message received, sending OK[0m
+[0;33mW (130446) OBDLINK_EMULATOR: Received data: STFPA 000,000[0m
+[0;32mI (130456) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (130486) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:8 handle:129[0m
+[0;32mI (130486) : 53 54 43 4d 4d 20 30 0d[0m
+[0;32mI (130486) OBDLINK_EMULATOR: Received data: STCMM 0[0m
+[0;32mI (130486) OBDLINK_EMULATOR: Trimmed input: 'STCMM 0'[0m
+[0;33mW (130496) OBDLINK_EMULATOR: Unparsed Message received, sending OK[0m
+[0;33mW (130496) OBDLINK_EMULATOR: Received data: STCMM 0[0m
+[0;32mI (130506) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (130556) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:5 handle:129[0m
+[0;32mI (130556) : 53 54 50 4f 0d[0m
+[0;32mI (130556) OBDLINK_EMULATOR: Received data: STPO[0m
+[0;32mI (130556) OBDLINK_EMULATOR: Trimmed input: 'STPO'[0m
+[0;33mW (130566) OBDLINK_EMULATOR: Unparsed Message received, sending OK[0m
+[0;33mW (130566) OBDLINK_EMULATOR: Received data: STPO[0m
+[0;32mI (130576) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (130616) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:5 handle:129[0m
+[0;32mI (130616) : 41 54 44 50 0d[0m
+[0;32mI (130616) OBDLINK_EMULATOR: Received data: ATDP[0m
+[0;32mI (130616) OBDLINK_EMULATOR: Trimmed input: 'ATDP'[0m
+[0;33mW (130616) OBDLINK_EMULATOR: Unparsed Message received, sending OK[0m
+[0;33mW (130626) OBDLINK_EMULATOR: Received data: ATDP[0m
+[0;32mI (130636) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (130646) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:4 handle:129[0m
+[0;32mI (130646) : 53 54 4d 0d[0m
+[0;32mI (130646) OBDLINK_EMULATOR: Received data: STM[0m
+[0;32mI (130646) OBDLINK_EMULATOR: Trimmed input: 'STM'[0m
+[0;33mW (130656) OBDLINK_EMULATOR: Handshake complete[0m
+[0;32mI (135946) OBDLINK_EMULATOR: Line: '51,51,1868,1,98,49,51,98,51,10,0,0.00,-1.40,1.82,1.00,26.40'[0m
+[0;32mI (135946) OBDLINK_EMULATOR: COOL:51 IAT:51 RPM:1868 GEAR:1 SPD:98 THR:49 OILT:51 OILP:98 DIFFT:51 DCCD:10 BRK:0 FB:0.00 FN:-1.40 BST:1.82 DAM:1.00 AFR:26.40[0m
+[0;32mI (135966) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (135966) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
+[0;32mI (145946) OBDLINK_EMULATOR: Line: '52,52,4592,2,30,20,52,67,52,33,0,-5.60,-1.40,5.45,1.00,11.00'[0m
+[0;32mI (145946) OBDLINK_EMULATOR: COOL:52 IAT:52 RPM:4592 GEAR:2 SPD:30 THR:20 OILT:52 OILP:67 DIFFT:52 DCCD:33 BRK:0 FB:-5.60 FN:-1.40 BST:5.45 DAM:1.00 AFR:11.00[0m
+[0;32mI (145966) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
+[0;32mI (145966) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (155946) OBDLINK_EMULATOR: Line: '53,53,5898,3,91,88,53,72,53,7,1,-1.40,-1.40,-5.45,1.00,24.20'[0m
+[0;32mI (155956) OBDLINK_EMULATOR: COOL:53 IAT:53 RPM:5898 GEAR:3 SPD:91 THR:88 OILT:53 OILP:72 DIFFT:53 DCCD:7 BRK:1 FB:-1.40 FN:-1.40 BST:-5.45 DAM:1.00 AFR:24.20[0m
+[0;32mI (155966) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
+[0;32mI (155966) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (165956) OBDLINK_EMULATOR: Line: '54,54,3199,3,111,79,54,69,54,28,1,-1.40,0.00,-10.91,1.00,17.60'[0m
+[0;32mI (165956) OBDLINK_EMULATOR: COOL:54 IAT:54 RPM:3199 GEAR:3 SPD:111 THR:79 OILT:54 OILP:69 DIFFT:54 DCCD:28 BRK:1 FB:-1.40 FN:0.00 BST:-10.91 DAM:1.00 AFR:17.60[0m
+[0;32mI (165966) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (165966) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
+[0;32mI (171176) OBDLINK_EMULATOR: ESP_SPP_CLOSE_EVT status:0 handle:129 close_by_remote:1[0m
+[0;32mI (175346) OBDLINK_EMULATOR: event: 17[0m
+[0;32mI (175956) OBDLINK_EMULATOR: Line: '55,55,2890,4,24,51,55,29,55,58,1,-5.60,0.00,10.91,1.00,18.70'[0m
+[0;32mI (175956) OBDLINK_EMULATOR: COOL:55 IAT:55 RPM:2890 GEAR:4 SPD:24 THR:51 OILT:55 OILP:29 DIFFT:55 DCCD:58 BRK:1 FB:-5.60 FN:0.00 BST:10.91 DAM:1.00 AFR:18.70[0m
+[0;32mI (185956) OBDLINK_EMULATOR: Line: '56,56,4992,2,123,17,56,68,56,25,1,0.00,-1.40,-7.27,1.00,14.30'[0m
+[0;32mI (185956) OBDLINK_EMULATOR: COOL:56 IAT:56 RPM:4992 GEAR:2 SPD:123 THR:17 OILT:56 OILP:68 DIFFT:56 DCCD:25 BRK:1 FB:0.00 FN:-1.40 BST:-7.27 DAM:1.00 AFR:14.30[0m
+[0;32mI (195956) OBDLINK_EMULATOR: Line: '57,57,3573,3,111,93,57,70,57,43,1,-4.20,0.00,11.82,1.00,18.70'[0m
+[0;32mI (195956) OBDLINK_EMULATOR: COOL:57 IAT:57 RPM:3573 GEAR:3 SPD:111 THR:93 OILT:57 OILP:70 DIFFT:57 DCCD:43 BRK:1 FB:-4.20 FN:0.00 BST:11.82 DAM:1.00 AFR:18.70[0m
+[0;32mI (205956) OBDLINK_EMULATOR: Line: '58,58,1496,4,99,32,58,54,58,49,0,-2.80,0.00,-3.64,1.00,26.40'[0m
+[0;32mI (205956) OBDLINK_EMULATOR: COOL:58 IAT:58 RPM:1496 GEAR:4 SPD:99 THR:32 OILT:58 OILP:54 DIFFT:58 DCCD:49 BRK:0 FB:-2.80 FN:0.00 BST:-3.64 DAM:1.00 AFR:26.40[0m
+[0;32mI (215956) OBDLINK_EMULATOR: Line: '59,59,1289,4,110,60,59,48,59,26,0,-4.20,-1.40,4.55,1.00,16.50'[0m
+[0;32mI (215956) OBDLINK_EMULATOR: COOL:59 IAT:59 RPM:1289 GEAR:4 SPD:110 THR:60 OILT:59 OILP:48 DIFFT:59 DCCD:26 BRK:0 FB:-4.20 FN:-1.40 BST:4.55 DAM:1.00 AFR:16.50[0m
+[0;32mI (225956) OBDLINK_EMULATOR: Line: '60,60,4180,1,54,53,60,27,60,79,0,-2.80,-1.40,-5.45,1.00,25.30'[0m
+[0;32mI (225956) OBDLINK_EMULATOR: COOL:60 IAT:60 RPM:4180 GEAR:1 SPD:54 THR:53 OILT:60 OILP:27 DIFFT:60 DCCD:79 BRK:0 FB:-2.80 FN:-1.40 BST:-5.45 DAM:1.00 AFR:25.30[0m
+[0;32mI (235956) OBDLINK_EMULATOR: Line: '61,61,6714,4,97,30,61,91,61,80,1,0.00,-1.40,10.00,1.00,19.80'[0m
+[0;32mI (235956) OBDLINK_EMULATOR: COOL:61 IAT:61 RPM:6714 GEAR:4 SPD:97 THR:30 OILT:61 OILP:91 DIFFT:61 DCCD:80 BRK:1 FB:0.00 FN:-1.40 BST:10.00 DAM:1.00 AFR:19.80[0m
+[0;32mI (245956) OBDLINK_EMULATOR: Line: '62,62,922,3,138,48,62,72,62,3,0,-1.40,0.00,-12.73,1.00,18.70'[0m
+[0;32mI (245956) OBDLINK_EMULATOR: COOL:62 IAT:62 RPM:922 GEAR:3 SPD:138 THR:48 OILT:62 OILP:72 DIFFT:62 DCCD:3 BRK:0 FB:-1.40 FN:0.00 BST:-12.73 DAM:1.00 AFR:18.70[0m
+[0;32mI (255956) OBDLINK_EMULATOR: Line: '63,63,5144,2,9,35,63,38,63,17,0,-1.40,-1.40,-15.45,1.00,23.10'[0m
+[0;32mI (255956) OBDLINK_EMULATOR: COOL:63 IAT:63 RPM:5144 GEAR:2 SPD:9 THR:35 OILT:63 OILP:38 DIFFT:63 DCCD:17 BRK:0 FB:-1.40 FN:-1.40 BST:-15.45 DAM:1.00 AFR:23.10[0m
+[0;32mI (265966) OBDLINK_EMULATOR: Line: '64,64,2576,1,69,57,64,62,64,30,1,-2.80,0.00,12.73,1.00,14.30'[0m
+[0;32mI (265966) OBDLINK_EMULATOR: COOL:64 IAT:64 RPM:2576 GEAR:1 SPD:69 THR:57 OILT:64 OILP:62 DIFFT:64 DCCD:30 BRK:1 FB:-2.80 FN:0.00 BST:12.73 DAM:1.00 AFR:14.30[0m
+[0;32mI (275966) OBDLINK_EMULATOR: Line: '65,65,4554,1,45,73,65,66,65,54,0,-2.80,0.00,-8.18,1.00,17.60'[0m
+[0;32mI (275966) OBDLINK_EMULATOR: COOL:65 IAT:65 RPM:4554 GEAR:1 SPD:45 THR:73 OILT:65 OILP:66 DIFFT:65 DCCD:54 BRK:0 FB:-2.80 FN:0.00 BST:-8.18 DAM:1.00 AFR:17.60[0m
+[0;32mI (285966) OBDLINK_EMULATOR: Line: '66,66,948,3,71,31,66,91,66,62,1,-2.80,-1.40,-9.09,1.00,14.30'[0m
+[0;32mI (285966) OBDLINK_EMULATOR: COOL:66 IAT:66 RPM:948 GEAR:3 SPD:71 THR:31 OILT:66 OILP:91 DIFFT:66 DCCD:62 BRK:1 FB:-2.80 FN:-1.40 BST:-9.09 DAM:1.00 AFR:14.30[0m
+[0;32mI (295966) OBDLINK_EMULATOR: Line: '67,67,2946,4,25,53,67,96,67,16,0,-4.20,-1.40,-14.55,1.00,23.10'[0m
+[0;32mI (295966) OBDLINK_EMULATOR: COOL:67 IAT:67 RPM:2946 GEAR:4 SPD:25 THR:53 OILT:67 OILP:96 DIFFT:67 DCCD:16 BRK:0 FB:-4.20 FN:-1.40 BST:-14.55 DAM:1.00 AFR:23.10[0m
+[0;32mI (305966) OBDLINK_EMULATOR: Line: '68,68,3699,4,147,26,68,86,68,55,1,-5.60,0.00,11.82,1.00,25.30'[0m
+[0;32mI (305966) OBDLINK_EMULATOR: COOL:68 IAT:68 RPM:3699 GEAR:4 SPD:147 THR:26 OILT:68 OILP:86 DIFFT:68 DCCD:55 BRK:1 FB:-5.60 FN:0.00 BST:11.82 DAM:1.00 AFR:25.30[0m
+[0;32mI (315966) OBDLINK_EMULATOR: Line: '69,69,4089,4,16,91,69,8,69,5,1,-4.20,-1.40,-17.27,1.00,16.50'[0m
+[0;32mI (315966) OBDLINK_EMULATOR: COOL:69 IAT:69 RPM:4089 GEAR:4 SPD:16 THR:91 OILT:69 OILP:8 DIFFT:69 DCCD:5 BRK:1 FB:-4.20 FN:-1.40 BST:-17.27 DAM:1.00 AFR:16.50[0m
+[0;32mI (325966) OBDLINK_EMULATOR: Line: '70,70,901,2,144,13,70,17,70,21,0,-1.40,0.00,-8.18,1.00,12.10'[0m
+[0;32mI (325966) OBDLINK_EMULATOR: COOL:70 IAT:70 RPM:901 GEAR:2 SPD:144 THR:13 OILT:70 OILP:17 DIFFT:70 DCCD:21 BRK:0 FB:-1.40 FN:0.00 BST:-8.18 DAM:1.00 AFR:12.10[0m
+[0;32mI (335966) OBDLINK_EMULATOR: Line: '71,71,470,4,106,86,71,90,71,30,1,-2.80,-1.40,-7.27,1.00,22.00'[0m
+[0;32mI (335966) OBDLINK_EMULATOR: COOL:71 IAT:71 RPM:470 GEAR:4 SPD:106 THR:86 OILT:71 OILP:90 DIFFT:71 DCCD:30 BRK:1 FB:-2.80 FN:-1.40 BST:-7.27 DAM:1.00 AFR:22.00[0m
+[0;32mI (345966) OBDLINK_EMULATOR: Line: '72,72,5506,2,108,94,72,82,72,97,1,-2.80,0.00,-5.45,1.00,24.20'[0m
+[0;32mI (345966) OBDLINK_EMULATOR: COOL:72 IAT:72 RPM:5506 GEAR:2 SPD:108 THR:94 OILT:72 OILP:82 DIFFT:72 DCCD:97 BRK:1 FB:-2.80 FN:0.00 BST:-5.45 DAM:1.00 AFR:24.20[0m
+[0;32mI (355966) OBDLINK_EMULATOR: Line: '73,73,1064,3,60,70,73,26,73,75,0,-1.40,0.00,14.55,1.00,25.30'[0m
+[0;32mI (355966) OBDLINK_EMULATOR: COOL:73 IAT:73 RPM:1064 GEAR:3 SPD:60 THR:70 OILT:73 OILP:26 DIFFT:73 DCCD:75 BRK:0 FB:-1.40 FN:0.00 BST:14.55 DAM:1.00 AFR:25.30[0m
+[0;32mI (365966) OBDLINK_EMULATOR: Line: '74,74,3658,1,33,30,74,55,74,2,1,-2.80,-1.40,12.73,1.00,22.00'[0m
+[0;32mI (365976) OBDLINK_EMULATOR: COOL:74 IAT:74 RPM:3658 GEAR:1 SPD:33 THR:30 OILT:74 OILP:55 DIFFT:74 DCCD:2 BRK:1 FB:-2.80 FN:-1.40 BST:12.73 DAM:1.00 AFR:22.00[0m
+[0;32mI (375976) OBDLINK_EMULATOR: Line: '75,75,2277,3,107,8,75,72,75,0,1,-2.80,-1.40,8.18,1.00,24.20'[0m
+[0;32mI (375976) OBDLINK_EMULATOR: COOL:75 IAT:75 RPM:2277 GEAR:3 SPD:107 THR:8 OILT:75 OILP:72 DIFFT:75 DCCD:0 BRK:1 FB:-2.80 FN:-1.40 BST:8.18 DAM:1.00 AFR:24.20[0m
+[0;32mI (385976) OBDLINK_EMULATOR: Line: '76,76,4922,3,119,36,76,13,76,94,1,-5.60,0.00,15.45,1.00,25.30'[0m
+[0;32mI (385976) OBDLINK_EMULATOR: COOL:76 IAT:76 RPM:4922 GEAR:3 SPD:119 THR:36 OILT:76 OILP:13 DIFFT:76 DCCD:94 BRK:1 FB:-5.60 FN:0.00 BST:15.45 DAM:1.00 AFR:25.30[0m
+[0;32mI (395976) OBDLINK_EMULATOR: Line: '77,77,1290,3,70,87,77,25,77,82,1,-2.80,-1.40,-17.27,1.00,26.40'[0m
+[0;32mI (395976) OBDLINK_EMULATOR: COOL:77 IAT:77 RPM:1290 GEAR:3 SPD:70 THR:87 OILT:77 OILP:25 DIFFT:77 DCCD:82 BRK:1 FB:-2.80 FN:-1.40 BST:-17.27 DAM:1.00 AFR:26.40[0m
+[0;32mI (405976) OBDLINK_EMULATOR: Line: '78,78,333,3,32,37,78,91,78,7,0,0.00,0.00,2.73,1.00,19.80'[0m
+[0;32mI (405976) OBDLINK_EMULATOR: COOL:78 IAT:78 RPM:333 GEAR:3 SPD:32 THR:37 OILT:78 OILP:91 DIFFT:78 DCCD:7 BRK:0 FB:0.00 FN:0.00 BST:2.73 DAM:1.00 AFR:19.80[0m
+[0;32mI (415976) OBDLINK_EMULATOR: Line: '79,79,4500,1,19,20,79,74,79,13,1,-4.20,0.00,-4.55,1.00,17.60'[0m
+[0;32mI (415976) OBDLINK_EMULATOR: COOL:79 IAT:79 RPM:4500 GEAR:1 SPD:19 THR:20 OILT:79 OILP:74 DIFFT:79 DCCD:13 BRK:1 FB:-4.20 FN:0.00 BST:-4.55 DAM:1.00 AFR:17.60[0m
+[0;32mI (425976) OBDLINK_EMULATOR: Line: '80,80,3226,3,78,50,80,34,80,19,0,-1.40,-1.40,-3.64,1.00,22.00'[0m
+[0;32mI (425976) OBDLINK_EMULATOR: COOL:80 IAT:80 RPM:3226 GEAR:3 SPD:78 THR:50 OILT:80 OILP:34 DIFFT:80 DCCD:19 BRK:0 FB:-1.40 FN:-1.40 BST:-3.64 DAM:1.00 AFR:22.00[0m
+[0;32mI (435976) OBDLINK_EMULATOR: Line: '81,81,358,1,146,93,81,31,81,74,1,-2.80,-1.40,-3.64,1.00,13.20'[0m
+[0;32mI (435976) OBDLINK_EMULATOR: COOL:81 IAT:81 RPM:358 GEAR:1 SPD:146 THR:93 OILT:81 OILP:31 DIFFT:81 DCCD:74 BRK:1 FB:-2.80 FN:-1.40 BST:-3.64 DAM:1.00 AFR:13.20[0m
+[0;32mI (437006) OBDLINK_EMULATOR: event: 16[0m
+[0;32mI (437336) OBDLINK_EMULATOR: ESP_SPP_SRV_OPEN_EVT status:0 handle:385, rem_bda:[c4:ef:3d:44:b1:48][0m
+[0;32mI (437366) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:4 handle:385[0m
+[0;32mI (437366) : 41 54 5a 0d[0m
+[0;32mI (437366) OBDLINK_EMULATOR: Received data: ATZ[0m
+[0;32mI (437366) OBDLINK_EMULATOR: Trimmed input: 'ATZ'[0m
+[0;33mW (437366) OBDLINK_EMULATOR: Handshake message, sending OK[0m
+[0;32mI (437376) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (437406) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:5 handle:385[0m
+[0;32mI (437406) : 41 54 45 30 0d[0m
+[0;32mI (437406) OBDLINK_EMULATOR: Received data: ATE0[0m
+[0;32mI (437406) OBDLINK_EMULATOR: Trimmed input: 'ATE0'[0m
+[0;33mW (437416) OBDLINK_EMULATOR: Handshake message, sending OK[0m
+[0;32mI (437416) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (437456) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:5 handle:385[0m
+[0;32mI (437456) : 41 54 53 30 0d[0m
+[0;32mI (437456) OBDLINK_EMULATOR: Received data: ATS0[0m
+[0;32mI (437456) OBDLINK_EMULATOR: Trimmed input: 'ATS0'[0m
+[0;33mW (437466) OBDLINK_EMULATOR: Handshake message, sending OK[0m
+[0;32mI (437466) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (437506) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:5 handle:385[0m
+[0;32mI (437506) : 41 54 4c 30 0d[0m
+[0;32mI (437506) OBDLINK_EMULATOR: Received data: ATL0[0m
+[0;32mI (437506) OBDLINK_EMULATOR: Trimmed input: 'ATL0'[0m
+[0;33mW (437506) OBDLINK_EMULATOR: Handshake message, sending OK[0m
+[0;32mI (437516) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (437556) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:7 handle:385[0m
+[0;32mI (437556) : 53 54 50 20 33 33 0d[0m
+[0;32mI (437556) OBDLINK_EMULATOR: Received data: STP 33[0m
+[0;32mI (437556) OBDLINK_EMULATOR: Trimmed input: 'STP 33'[0m
+[0;33mW (437556) OBDLINK_EMULATOR: Canbus mode detected, sending OK[0m
+[0;32mI (437566) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (437636) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:10 handle:385[0m
+[0;32mI (437636) : 53 54 43 53 45 47 52 20 31 0d[0m
+[0;32mI (437636) OBDLINK_EMULATOR: Received data: STCSEGR 1[0m
+[0;32mI (437636) OBDLINK_EMULATOR: Trimmed input: 'STCSEGR 1'[0m
+[0;33mW (437646) OBDLINK_EMULATOR: Unparsed Message received, sending OK[0m
+[0;33mW (437646) OBDLINK_EMULATOR: Received data: STCSEGR 1[0m
+[0;32mI (437656) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (437686) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:6 handle:385[0m
+[0;32mI (437686) : 41 54 48 20 31 0d[0m
+[0;32mI (437686) OBDLINK_EMULATOR: Received data: ATH 1[0m
+[0;32mI (437686) OBDLINK_EMULATOR: Trimmed input: 'ATH 1'[0m
+[0;33mW (437696) OBDLINK_EMULATOR: Unparsed Message received, sending OK[0m
+[0;33mW (437696) OBDLINK_EMULATOR: Received data: ATH 1[0m
+[0;32mI (437706) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (437736) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:6 handle:385[0m
+[0;32mI (437736) : 41 54 44 20 30 0d[0m
+[0;32mI (437736) OBDLINK_EMULATOR: Received data: ATD 0[0m
+[0;32mI (437736) OBDLINK_EMULATOR: Trimmed input: 'ATD 0'[0m
+[0;33mW (437736) OBDLINK_EMULATOR: Unparsed Message received, sending OK[0m
+[0;33mW (437746) OBDLINK_EMULATOR: Received data: ATD 0[0m
+[0;32mI (437756) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (437776) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:6 handle:385[0m
+[0;32mI (437776) : 41 54 50 50 53 0d[0m
+[0;32mI (437776) OBDLINK_EMULATOR: Received data: ATPPS[0m
+[0;32mI (437786) OBDLINK_EMULATOR: Trimmed input: 'ATPPS'[0m
+[0;33mW (437786) OBDLINK_EMULATOR: Unparsed Message received, sending OK[0m
+[0;33mW (437796) OBDLINK_EMULATOR: Received data: ATPPS[0m
+[0;32mI (437796) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (437826) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:6 handle:385[0m
+[0;32mI (437826) : 53 54 46 41 43 0d[0m
+[0;32mI (437826) OBDLINK_EMULATOR: Received data: STFAC[0m
+[0;32mI (437826) OBDLINK_EMULATOR: Trimmed input: 'STFAC'[0m
+[0;33mW (437836) OBDLINK_EMULATOR: Unparsed Message received, sending OK[0m
+[0;33mW (437836) OBDLINK_EMULATOR: Received data: STFAC[0m
+[0;32mI (437846) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (437876) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:16 handle:385[0m
+[0;32mI (437876) : 53 54 46 50 41 20 30 31 32 33 2c 30 37 46 46 0d[0m
+[0;32mI (437876) OBDLINK_EMULATOR: Received data: STFPA 0123,07FF[0m
+[0;32mI (437886) OBDLINK_EMULATOR: Trimmed input: 'STFPA 0123,07FF'[0m
+[0;33mW (437886) OBDLINK_EMULATOR: Unparsed Message received, sending OK[0m
+[0;33mW (437896) OBDLINK_EMULATOR: Received data: STFPA 0123,07FF[0m
+[0;32mI (437896) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (437946) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:8 handle:385[0m
+[0;32mI (437946) : 53 54 43 4d 4d 20 30 0d[0m
+[0;32mI (437946) OBDLINK_EMULATOR: Received data: STCMM 0[0m
+[0;32mI (437956) OBDLINK_EMULATOR: Trimmed input: 'STCMM 0'[0m
+[0;33mW (437956) OBDLINK_EMULATOR: Unparsed Message received, sending OK[0m
+[0;33mW (437966) OBDLINK_EMULATOR: Received data: STCMM 0[0m
+[0;32mI (437966) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (437996) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:5 handle:385[0m
+[0;32mI (437996) : 53 54 50 4f 0d[0m
+[0;32mI (437996) OBDLINK_EMULATOR: Received data: STPO[0m
+[0;32mI (437996) OBDLINK_EMULATOR: Trimmed input: 'STPO'[0m
+[0;33mW (438006) OBDLINK_EMULATOR: Unparsed Message received, sending OK[0m
+[0;33mW (438016) OBDLINK_EMULATOR: Received data: STPO[0m
+[0;32mI (438016) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (438026) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:5 handle:385[0m
+[0;32mI (438026) : 41 54 44 50 0d[0m
+[0;32mI (438026) OBDLINK_EMULATOR: Received data: ATDP[0m
+[0;32mI (438036) OBDLINK_EMULATOR: Trimmed input: 'ATDP'[0m
+[0;33mW (438036) OBDLINK_EMULATOR: Unparsed Message received, sending OK[0m
+[0;33mW (438046) OBDLINK_EMULATOR: Received data: ATDP[0m
+[0;32mI (438046) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (438066) OBDLINK_EMULATOR: ESP_SPP_DATA_IND_EVT len:4 handle:385[0m
+[0;32mI (438066) : 53 54 4d 0d[0m
+[0;32mI (438066) OBDLINK_EMULATOR: Received data: STM[0m
+[0;32mI (438066) OBDLINK_EMULATOR: Trimmed input: 'STM'[0m
+[0;33mW (438076) OBDLINK_EMULATOR: Handshake complete[0m
+[0;32mI (445976) OBDLINK_EMULATOR: Line: '82,82,6675,4,101,46,82,30,82,65,1,0.00,-1.40,-14.55,1.00,24.20'[0m
+[0;32mI (445976) OBDLINK_EMULATOR: COOL:82 IAT:82 RPM:6675 GEAR:4 SPD:101 THR:46 OILT:82 OILP:30 DIFFT:82 DCCD:65 BRK:1 FB:0.00 FN:-1.40 BST:-14.55 DAM:1.00 AFR:24.20[0m
+[0;32mI (445996) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
+[0;32mI (445996) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (455976) OBDLINK_EMULATOR: Line: '83,83,1785,1,53,40,83,32,83,19,1,0.00,0.00,-0.91,1.00,16.50'[0m
+[0;32mI (455976) OBDLINK_EMULATOR: COOL:83 IAT:83 RPM:1785 GEAR:1 SPD:53 THR:40 OILT:83 OILP:32 DIFFT:83 DCCD:19 BRK:1 FB:0.00 FN:0.00 BST:-0.91 DAM:1.00 AFR:16.50[0m
+[0;32mI (455996) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
+[0;32mI (455996) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (465976) OBDLINK_EMULATOR: Line: '84,84,501,3,3,74,84,65,84,51,1,0.00,-1.40,-0.91,1.00,14.30'[0m
+[0;32mI (465986) OBDLINK_EMULATOR: COOL:84 IAT:84 RPM:501 GEAR:3 SPD:3 THR:74 OILT:84 OILP:65 DIFFT:84 DCCD:51 BRK:1 FB:0.00 FN:-1.40 BST:-0.91 DAM:1.00 AFR:14.30[0m
+[0;32mI (465996) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
+[0;32mI (465996) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (475986) OBDLINK_EMULATOR: Line: '85,85,5411,1,112,65,85,94,85,56,0,-2.80,-1.40,0.91,1.00,17.60'[0m
+[0;32mI (475986) OBDLINK_EMULATOR: COOL:85 IAT:85 RPM:5411 GEAR:1 SPD:112 THR:65 OILT:85 OILP:94 DIFFT:85 DCCD:56 BRK:0 FB:-2.80 FN:-1.40 BST:0.91 DAM:1.00 AFR:17.60[0m
+[0;32mI (475996) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
+[0;32mI (475996) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (485986) OBDLINK_EMULATOR: Line: '86,86,1927,2,104,76,86,16,86,31,0,-1.40,-1.40,5.45,1.00,17.60'[0m
+[0;32mI (485986) OBDLINK_EMULATOR: COOL:86 IAT:86 RPM:1927 GEAR:2 SPD:104 THR:76 OILT:86 OILP:16 DIFFT:86 DCCD:31 BRK:0 FB:-1.40 FN:-1.40 BST:5.45 DAM:1.00 AFR:17.60[0m
+[0;32mI (485996) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (485996) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
+[0;32mI (495986) OBDLINK_EMULATOR: Line: '87,87,3268,3,26,83,87,28,87,4,1,-2.80,-1.40,1.82,1.00,11.00'[0m
+[0;32mI (495986) OBDLINK_EMULATOR: COOL:87 IAT:87 RPM:3268 GEAR:3 SPD:26 THR:83 OILT:87 OILP:28 DIFFT:87 DCCD:4 BRK:1 FB:-2.80 FN:-1.40 BST:1.82 DAM:1.00 AFR:11.00[0m
+[0;32mI (495996) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (495996) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
+[0;32mI (505986) OBDLINK_EMULATOR: Line: '88,88,5159,1,112,75,88,95,88,31,0,0.00,-1.40,-6.36,1.00,16.50'[0m
+[0;32mI (505986) OBDLINK_EMULATOR: COOL:88 IAT:88 RPM:5159 GEAR:1 SPD:112 THR:75 OILT:88 OILP:95 DIFFT:88 DCCD:31 BRK:0 FB:0.00 FN:-1.40 BST:-6.36 DAM:1.00 AFR:16.50[0m
+[0;32mI (505996) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (505996) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
+[0;32mI (515986) OBDLINK_EMULATOR: Line: '89,89,5260,3,51,73,89,58,89,32,0,0.00,0.00,7.27,1.00,17.60'[0m
+[0;32mI (515986) OBDLINK_EMULATOR: COOL:89 IAT:89 RPM:5260 GEAR:3 SPD:51 THR:73 OILT:89 OILP:58 DIFFT:89 DCCD:32 BRK:0 FB:0.00 FN:0.00 BST:7.27 DAM:1.00 AFR:17.60[0m
+[0;32mI (515996) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (515996) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
+[0;32mI (525986) OBDLINK_EMULATOR: Line: '90,90,1117,4,111,58,90,75,90,13,0,-2.80,0.00,8.18,1.00,12.10'[0m
+[0;32mI (525986) OBDLINK_EMULATOR: COOL:90 IAT:90 RPM:1117 GEAR:4 SPD:111 THR:58 OILT:90 OILP:75 DIFFT:90 DCCD:13 BRK:0 FB:-2.80 FN:0.00 BST:8.18 DAM:1.00 AFR:12.10[0m
+[0;32mI (526006) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (526006) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
+[0;32mI (535986) OBDLINK_EMULATOR: Line: '91,91,3395,2,148,92,91,45,91,48,1,-2.80,0.00,0.00,1.00,13.20'[0m
+[0;32mI (535986) OBDLINK_EMULATOR: COOL:91 IAT:91 RPM:3395 GEAR:2 SPD:148 THR:92 OILT:91 OILP:45 DIFFT:91 DCCD:48 BRK:1 FB:-2.80 FN:0.00 BST:0.00 DAM:1.00 AFR:13.20[0m
+[0;32mI (536006) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (536006) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
+[0;32mI (545986) OBDLINK_EMULATOR: Line: '92,92,3251,2,54,39,92,28,92,0,1,0.00,0.00,10.91,1.00,20.90'[0m
+[0;32mI (545986) OBDLINK_EMULATOR: COOL:92 IAT:92 RPM:3251 GEAR:2 SPD:54 THR:39 OILT:92 OILP:28 DIFFT:92 DCCD:0 BRK:1 FB:0.00 FN:0.00 BST:10.91 DAM:1.00 AFR:20.90[0m
+[0;32mI (546006) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (546006) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
+[0;32mI (555986) OBDLINK_EMULATOR: Line: '93,93,1724,4,45,58,93,11,93,20,0,-2.80,-1.40,-15.45,1.00,20.90'[0m
+[0;32mI (555986) OBDLINK_EMULATOR: COOL:93 IAT:93 RPM:1724 GEAR:4 SPD:45 THR:58 OILT:93 OILP:11 DIFFT:93 DCCD:20 BRK:0 FB:-2.80 FN:-1.40 BST:-15.45 DAM:1.00 AFR:20.90[0m
+[0;32mI (556006) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (556006) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
+[0;32mI (565986) OBDLINK_EMULATOR: Line: '94,94,1127,1,142,26,94,72,94,52,0,0.00,-1.40,-1.82,1.00,17.60'[0m
+[0;32mI (565996) OBDLINK_EMULATOR: COOL:94 IAT:94 RPM:1127 GEAR:1 SPD:142 THR:26 OILT:94 OILP:72 DIFFT:94 DCCD:52 BRK:0 FB:0.00 FN:-1.40 BST:-1.82 DAM:1.00 AFR:17.60[0m
+[0;32mI (566006) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
+[0;32mI (566006) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (575986) OBDLINK_EMULATOR: Line: '95,95,5506,2,100,73,95,91,95,13,1,0.00,0.00,17.27,1.00,20.90'[0m
+[0;32mI (575996) OBDLINK_EMULATOR: COOL:95 IAT:95 RPM:5506 GEAR:2 SPD:100 THR:73 OILT:95 OILP:91 DIFFT:95 DCCD:13 BRK:1 FB:0.00 FN:0.00 BST:17.27 DAM:1.00 AFR:20.90[0m
+[0;32mI (576006) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
+[0;32mI (576006) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (585996) OBDLINK_EMULATOR: Line: '96,96,3797,3,80,79,96,81,96,89,1,-5.60,-1.40,5.45,1.00,24.20'[0m
+[0;32mI (585996) OBDLINK_EMULATOR: COOL:96 IAT:96 RPM:3797 GEAR:3 SPD:80 THR:79 OILT:96 OILP:81 DIFFT:96 DCCD:89 BRK:1 FB:-5.60 FN:-1.40 BST:5.45 DAM:1.00 AFR:24.20[0m
+[0;32mI (586006) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
+[0;32mI (586006) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (595996) OBDLINK_EMULATOR: Line: '97,97,684,2,76,39,97,64,97,53,1,-4.20,0.00,14.55,1.00,17.60'[0m
+[0;32mI (595996) OBDLINK_EMULATOR: COOL:97 IAT:97 RPM:684 GEAR:2 SPD:76 THR:39 OILT:97 OILP:64 DIFFT:97 DCCD:53 BRK:1 FB:-4.20 FN:0.00 BST:14.55 DAM:1.00 AFR:17.60[0m
+[0;32mI (596006) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (596006) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
+[0;32mI (605996) OBDLINK_EMULATOR: Line: '98,98,1161,3,32,67,98,96,98,0,1,-5.60,0.00,-11.82,1.00,13.20'[0m
+[0;32mI (605996) OBDLINK_EMULATOR: COOL:98 IAT:98 RPM:1161 GEAR:3 SPD:32 THR:67 OILT:98 OILP:96 DIFFT:98 DCCD:0 BRK:1 FB:-5.60 FN:0.00 BST:-11.82 DAM:1.00 AFR:13.20[0m
+[0;32mI (606006) OBDLINK_EMULATOR: ESP_SPP_WRITE_EVT[0m
+[0;32mI (606006) OBDLINK_EMULATOR: BT message sent: 12305397B450045[0m
